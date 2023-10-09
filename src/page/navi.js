@@ -1,6 +1,5 @@
 import React from 'react';
 import '../App.css';
-import { Link } from 'react-router-dom';
 
 const Navi = () => {
     return(
@@ -13,9 +12,9 @@ const Navi = () => {
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <Link class="nav-link" to = "/about">About</Link>
-                    <Link class = "nav-link" to="/projects" > Projects </Link> 
+                    <a class="nav-link active" aria-current="page">Home</a>
+                    <a class="nav-link" href = "#about">About</a>
+                    <a class = "nav-link" href = "#projects" > Projects </a> 
                     <a class="nav-link" href="#" tabindex="-1">Resume</a>
                 </div>
             </div>

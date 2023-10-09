@@ -5,7 +5,7 @@ import xcel from '../images/xcelerator.jpg';
 
 const Projects = () => {
     return (
-    <div>
+    <div id = "projects">
     <header className="projects">
     <div class="card" style={{width: 180}}>
         <img src = {wow} class="card-img-top"></img>
