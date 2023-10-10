@@ -2,6 +2,7 @@ import Info from './page/info';
 //import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Proj from "./page/projects";
 import Navi from './page/navi';
+import Resume from "./page/resume";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Navi />
       <Info />
       <Proj />
+      <Resume />
     </div>
   );
 }

@@ -15,7 +15,7 @@ const Navi = () => {
                     <a class="nav-link active" aria-current="page">Home</a>
                     <a class="nav-link" href = "#about">About</a>
                     <a class = "nav-link" href = "#projects" > Projects </a> 
-                    <a class="nav-link" href="#" tabindex="-1">Resume</a>
+                    <a class="nav-link" href="#resumes" tabindex="-1">Resume</a>
                 </div>
             </div>
         </div>
