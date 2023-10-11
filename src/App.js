@@ -3,6 +3,7 @@ import Info from './page/info';
 import Proj from "./page/projects";
 import Navi from './page/navi';
 import Resume from "./page/resume";
+import Footer from "./page/footer";
 import "./App.css";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Info />
       <Proj />
       <Resume />
+      <Footer />
     </div>
   );
 }
