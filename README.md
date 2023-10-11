@@ -74,3 +74,4 @@ Packages -
 cdbreact
 react-router-dom
 react-pdf
+react-router-hash-link
