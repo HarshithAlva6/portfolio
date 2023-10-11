@@ -7,7 +7,7 @@ const Projects = () => {
     return (
     <div id = "projects">
     <header className="projects">
-    <div class="card" style={{width: 180}}>
+    <div class="card" style={{width: 250}}>
         <img src = {wow} class="card-img-top"></img>
         <div class="card-body">
             <h5 class="card-title">Danske IT</h5>
@@ -15,7 +15,7 @@ const Projects = () => {
             <a href="https://danskebank.com/groupit" class="btn btn-primary">Refer</a>
         </div>
     </div>
-    <div class="card" style={{width: 180}}>
+    <div class="card" style={{width: 250}}>
         <img src={wow} class="card-img-top"></img>
         <div class="card-body">
             <h5 class="card-title">Danske IT</h5>
@@ -24,7 +24,7 @@ Gemini and COBOL to the newest decentralized ones like ReactJS and cloud servers
             <a href="https://danskebank.com/groupit" class="btn btn-primary">Refer</a>
         </div>
     </div>
-    <div class="card" style={{width: 180}}>
+    <div class="card" style={{width: 250}}>
         <img src={xcel} class="card-img-top"></img>
         <div class="card-body">
             <h5 class="card-title">Xcelerator</h5>
