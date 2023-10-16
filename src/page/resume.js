@@ -5,6 +5,8 @@ import { Document, Page, pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
 const resume = () => {
+    //const navigationHeight = document.querySelector('.top').offsetHeight;
+    //document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 1 + "px");
     return (
         <div id = "resumes">
             <Document file={resumeFile}>
