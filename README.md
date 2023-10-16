@@ -74,8 +74,7 @@ Packages -
 cdbreact
 react-router-dom
 react-pdf
-github-contribution-canvas
-github-calendar
+//github-contribution-canvas
+//github-calendar
 react-github-calendar
 express
-react-router-hash-link
