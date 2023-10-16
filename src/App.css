@@ -48,6 +48,9 @@ html {
 #row1 {
   margin-top: 50px;
 }
+.cont {
+  margin: 0 15%;
+}
 .col img {
     width: 100%;
     height: 100%;

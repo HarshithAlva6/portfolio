@@ -4,6 +4,7 @@ import Navi from './navi';
 import Footer from "./footer";
 import Prog from '../images/programmer.jpg';
 import GitHubCalendar from 'react-github-calendar';
+import Carousel from './carousel';
 
 const About = () => {
     return (
@@ -18,7 +19,8 @@ const About = () => {
             <img src={Prog} alt="Logo"/>
         </div>
     </div>
-    <div><GitHubCalendar username="HarshithAlva6" /></div>
+    <Carousel />
+    <div class = 'cont'><GitHubCalendar username="HarshithAlva6" /></div>
     <Footer />
     </div>
     );
