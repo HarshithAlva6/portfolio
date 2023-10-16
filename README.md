@@ -78,3 +78,4 @@ github-contribution-canvas
 github-calendar
 react-github-calendar
 express
+react-router-hash-link
