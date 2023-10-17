@@ -11,9 +11,11 @@ const About = () => {
     <div>
     <Navi />
     <div id = "row1" class = "row">
-        <div class = "col">
-            <h1>Harshith Harijeevan</h1>
-            <p>A Web Developer who is passionate about AI and more!</p>
+        <div class = "col me">
+            <h1>WELCOME.</h1>
+            <p>I am Harshith Harijeevan, and I come from Bengaluru, the Silicon Valley of India! <br />
+                A Web Developer by day, and an enthusiastic AI learner by night! &#128513;
+            </p>
         </div>
         <div class = "col">
             <img src={Prog} alt="Logo"/>

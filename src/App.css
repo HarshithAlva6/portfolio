@@ -73,6 +73,14 @@ html {
   height: 50px; 
 }
 
+.me {
+  text-align: center;
+  padding: 50px;
+}
+
+.me h1 {
+  margin-top: 50px;
+}
 .navbar-collapse {
   margin-left: 70%;
 }
@@ -89,6 +97,18 @@ html {
   object-fit: contain;
   max-width: 80%;
   margin: 10% 20%;
+}
+
+
+.carousel .carousel-indicators {
+  bottom: -50px;
+}
+.carousel .carousel-indicators button {
+  background-color: black;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
 }
 
 
