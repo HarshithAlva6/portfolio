@@ -3,13 +3,13 @@ import { CDBContainer, CDBBox, CDBBtn, CDBIcon } from 'cdbreact';
 
 const Footer = () => {
   return (
-    <CDBContainer className="shadow">
+    <div class = "shadow">
+    <CDBContainer>
       <CDBBox
         display="flex"
         justifyContent="between"
         alignItems="center"
         className="mx-auto py-4 flex-wrap"
-        style={{ width: '100%' }}
       >
         <CDBBox>
           <small className="ms-2">&copy; 2023 Harshith Harijeevan. All rights reserved.</small>
@@ -27,6 +27,7 @@ const Footer = () => {
         </CDBBox>
       </CDBBox>
     </CDBContainer>
+    </div>
   );
 };
 

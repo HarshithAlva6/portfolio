@@ -10,6 +10,7 @@ const Carousel = () => {
     return(
         <div>
             <div id="carouselExampleCaptions" class="carousel slide cert" data-bs-ride="false">
+            <h1><u>Certifications</u></h1>
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -21,45 +22,21 @@ const Carousel = () => {
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="d-block w-100" src= {dev} alt="First slide" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src= {coursera} alt="Second slide" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src={js} alt="Third slide" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src={tf} alt="Fourth slide" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src={spring} alt="Fifth Slide" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src={data} alt="Sixth slide" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
                     </div>
                 </div>
                 

@@ -8,6 +8,7 @@ const resume = () => {
     //const navigationHeight = document.querySelector('.top').offsetHeight;
     //document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 1 + "px");
     return (
+        <div id = "back">
         <div id = "resumes">
             <Document file={resumeFile}>
                 <Page renderTextLayer={false}
@@ -15,6 +16,7 @@ const resume = () => {
                     customTextRenderer={false}
                     pageNumber={1} />
             </Document>
+        </div>
         </div>
     );
 }
