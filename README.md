@@ -78,3 +78,4 @@ react-pdf
 //github-calendar
 react-github-calendar
 express
+font-awesome packages (3)
