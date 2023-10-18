@@ -41,6 +41,7 @@ html {
   align-items: center;
   justify-content: center;
   font-size: 12px;
+  border-radius: 15px 15px;
 }
 
 .card {
@@ -49,11 +50,25 @@ html {
     justify-content:space-between;
     flex-wrap:wrap;
     margin: 1rem auto;
-    width: 26%;
+    width: 28%;
     min-width: auto;
     min-height: 50vh;
   }
-
+  .card button {
+    height:100%;
+    display:block;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .card button:hover {background-color: whitesmoke}
+  
+  .card button:active {
+    background-color: whitesmoke;
+    box-shadow: 0 5px #666;
+    transform: translateY(3px);
+  }
 #row1 {
   margin-top: 50px;
 }
@@ -104,7 +119,7 @@ html {
 }
 #resumes {
   margin: 0 25%;
-  width: 50%;
+  width: 50vh;
   height: auto;
   border: 2px solid black;
   margin-top: 100px;
