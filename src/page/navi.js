@@ -1,6 +1,8 @@
 import React from 'react';
 import '../App.css';
 import { Link, useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouseUser, faAddressCard, faComputer, faFile} from '@fortawesome/free-solid-svg-icons';
 
 const Navi = () => {
     const navigate = useNavigate(); 
@@ -17,10 +19,10 @@ const Navi = () => {
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href = "#about" onClick={goHome}>Home</a>
-                    <Link class="nav-link" to = "/also">About</Link>
-                    <a class = "nav-link" href = "#projects" onClick={goHome}> Projects </a> 
-                    <a class="nav-link" href="#resumes" tabindex="-1" onClick={goHome}>Resume</a>
+                    <a class="nav-link active" aria-current="page" href = "#about" onClick={goHome}><FontAwesomeIcon icon={faHouseUser} size="md" />Home</a>
+                    <Link class="nav-link" to = "/also"><FontAwesomeIcon icon={faAddressCard} style={{color: "#000000",}} />About</Link>
+                    <a class = "nav-link" href = "#projects" onClick={goHome}> <FontAwesomeIcon icon={faComputer} style={{color: "#000000", verticalAlign: "middle"}} />Projects </a> 
+                    <a class="nav-link" href="#resumes" tabindex="-1" onClick={goHome}><span class="fa-solid fa-file"></span>Resume</a>
                 </div>
             </div>
         </div>
