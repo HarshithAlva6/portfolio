@@ -57,6 +57,10 @@ html {
 #row1 {
   margin-top: 50px;
 }
+.nav-link {
+    display: inline;
+    float: left;
+}
 .cont {
   margin: 0 20%;
 }
@@ -91,7 +95,7 @@ html {
   margin-top: 50px;
 }
 .navbar-collapse {
-  margin-left: 70%;
+  float: left;
 }
 
 #back {
