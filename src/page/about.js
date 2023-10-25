@@ -11,7 +11,7 @@ const About = () => {
     <div>
     <Navi />
     <div id = "row1" class = "row">
-        <div class = "col me">
+        <div class = "col-sm-6 me">
             <h1>WELCOME.</h1>
             <p>I am <strong>Harshith Harijeevan</strong>, and I come from <b>Bengaluru</b>, the Silicon Valley of India! <br />
                 A <i>Web Developer</i> by day, and an enthusiastic AI learner by night! &#128513; <br />
@@ -19,7 +19,7 @@ const About = () => {
                 at California State University, Fullerton.
             </p>
         </div>
-        <div class = "col">
+        <div class = "col-sm-6">
             <img src={Prog} alt="Logo"/>
         </div>
     </div>

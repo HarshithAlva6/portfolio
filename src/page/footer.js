@@ -12,9 +12,9 @@ const Footer = () => {
         className="mx-auto py-4 flex-wrap"
       >
         <CDBBox>
-          <small className="ms-2">&copy; 2023 Harshith Harijeevan. All rights reserved.</small>
+          <small className="ms-2 mob">&copy; 2023 Harshith Harijeevan. All rights reserved.</small>
         </CDBBox>
-        <CDBBox display="flex">
+        <CDBBox className = "mob">
           <CDBBtn flat color="light" className="p-2" href = 'https://www.linkedin.com/in/harshith-harijeevan-ba796616b/'>
             <CDBIcon fab icon="linkedin" />
           </CDBBtn>
