@@ -2,10 +2,12 @@ import React from 'react';
 import '../App.css';
 import wow from '../images/danske.png';
 import xcel from '../images/xcelerator.jpg';
+import Carousel2 from './carousel2';
 
 const Projects = () => {
     return (
     <div id = "projects">
+    <h2><u>Projects</u></h2>
     <header className="projects">
     <form class = "card">
     <button formAction='https://danskebank.com/groupit'>
@@ -36,6 +38,7 @@ Gemini and COBOL to the newest decentralized ones like ReactJS and cloud servers
     </button>
     </form>
     </header>
+    <Carousel2/>
     </div>
     );
 }

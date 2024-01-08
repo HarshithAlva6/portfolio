@@ -29,7 +29,6 @@ html {
   background: linear-gradient(to bottom, #2975c1, #240090);
 }
 .projects {
-  min-height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -44,9 +43,8 @@ html {
     justify-content:space-between;
     flex-wrap:wrap;
     margin: 1rem auto;
-    width: 28%;
+    width: 25%;
     min-width: auto;
-    min-height: 50vh;
   }
   .card button {
     height:100%;
