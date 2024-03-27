@@ -110,11 +110,12 @@ html {
   background: linear-gradient(to bottom,#240090, #0c0032);
 }
 #resumes {
-  margin: 0 25%;
+  margin: 0 auto;
   width: 50vh;
   height: auto;
   border: 2px solid black;
   margin-top: 100px;
+  margin-bottom: 20px;
 }
 
 .cert {
