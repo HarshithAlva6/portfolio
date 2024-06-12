@@ -108,14 +108,17 @@ html {
 #back {
   background-color: #240090;
   background: linear-gradient(to bottom,#240090, #0c0032);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
 }
 #resumes {
   margin: 0 auto;
   width: 50vh;
   height: auto;
   border: 2px solid black;
-  margin-top: 100px;
-  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 .cert {
