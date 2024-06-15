@@ -22,7 +22,7 @@ const Navi = () => {
                     <a class="nav-link active" aria-current="page" href = "#about" onClick={goHome}><FontAwesomeIcon icon={faHouseUser} size="md" /> Home</a>
                     <Link class="nav-link" to = "/also"><FontAwesomeIcon icon={faAddressCard} style={{color: "#000000",}} /> About</Link>
                     <a class = "nav-link" href = "#projects" onClick={goHome}> <FontAwesomeIcon icon={faComputer} style={{color: "#000000"}} /> Projects </a> 
-                    <a class="nav-link" href="#resumes" tabindex="-1" onClick={goHome}><FontAwesomeIcon icon={faFile} style={{color: "#000000"}} /> Resume</a>
+                    <a class="nav-link" href="#back" tabindex="-1" onClick={goHome}><FontAwesomeIcon icon={faFile} style={{color: "#000000"}} /> Resume</a>
                 </div>
             </div>
         </div>
