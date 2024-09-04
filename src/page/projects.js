@@ -13,7 +13,7 @@ const Projects = () => {
     <button formAction='https://danskebank.com/groupit'>
         <img src = {wow} class="card-img-top" alt="Danske IT"></img>
         <div class="card-body">
-            <h5 class="card-title">Danske IT</h5>
+            <h5 class="card-title">Danske IT (Mainframes)</h5>
             <p class="card-text">Fulfilled hands-on training to create 2 projects on COBOL and PL/I, which comprise the legacy systems. This is a part of Danica Pension's injury and customer systems.</p>
         </div>
     </button>
@@ -22,7 +22,7 @@ const Projects = () => {
     <button formAction='https://danskebank.com/groupit'>
         <img src={wow} class="card-img-top" alt="Danske IT"></img>
         <div class="card-body">
-            <h5 class="card-title">Danske IT</h5>
+            <h5 class="card-title">Danske IT (MERN Stack) </h5>
             <p class="card-text">Implemented front-end as part of a pilot project. Switching from 40% of the legacy systems which used
 Gemini and COBOL to the newest decentralized ones like ReactJS and cloud servers.</p>
         </div>
