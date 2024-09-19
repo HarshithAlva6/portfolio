@@ -25,7 +25,7 @@ const About = () => {
     </div>
     <Carousel />
     <div class = 'cont'>
-        <h1><u>GitHub Contributions</u></h1>
+        <h1>GitHub Contributions</h1>
         <GitHubCalendar username="HarshithAlva6" /></div>
     <Footer />
     </div>

@@ -29,10 +29,10 @@ html {
   background: linear-gradient(to bottom, #2975c1, #240090);
 }
 .projects {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 20px;
+  justify-items: center;
   font-size: 12px;
   border-radius: 15px 15px;
 }
@@ -43,7 +43,7 @@ html {
     justify-content:space-between;
     flex-wrap:wrap;
     margin: 1rem auto;
-    width: 25%;
+    width: 75%;
     min-width: auto;
   }
   .card button {
@@ -149,7 +149,17 @@ html {
 .mob {
   display: flex;
 }
-
+h2, h1 {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Simple, clean font */
+  font-size: 2rem; /* Slightly smaller font size */
+  font-weight: 600; /* Semi-bold for emphasis without being too heavy */
+  color: #333; /* Dark gray for a softer contrast */
+  text-align: center; /* Center the text */
+  text-transform: none; /* Keep text as entered (not all caps) */
+  padding: 15px 0; /* Adds subtle spacing around the header */
+  letter-spacing: 1px; /* Adds slight letter spacing */
+  margin-bottom: 25px; /* Adds space below the header */
+}
 
 @keyframes App-logo-spin {
   from {

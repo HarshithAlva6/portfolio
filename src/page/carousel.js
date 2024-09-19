@@ -10,7 +10,7 @@ const Carousel = () => {
     return(
         <div>
             <div id="carouselExampleCaptions" class="carousel slide cert" data-bs-ride="false">
-            <h1><u>Certifications</u></h1>
+            <h1>Certifications</h1>
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>

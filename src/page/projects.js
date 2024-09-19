@@ -2,12 +2,13 @@ import React from 'react';
 import '../App.css';
 import wow from '../images/danske.png';
 import xcel from '../images/xcelerator.jpg';
+import Mind from '../images/MindKind.jpg';
 import Carousel2 from './carousel2';
 
 const Projects = () => {
     return (
     <div id = "projects">
-    <h2><u>Projects</u></h2>
+    <h2>Projects</h2>
     <header className="projects">
     <form class = "card">
     <button formAction='https://danskebank.com/groupit'>
@@ -34,6 +35,15 @@ Gemini and COBOL to the newest decentralized ones like ReactJS and cloud servers
         <div class="card-body">
             <h5 class="card-title">Xcelerator</h5>
             <p class="card-text"> Procure, expand, and dispense engaging content for students to get real-world context about what they learn on a daily basis. Generate 1 pager notes, which also strengthened the knowledge of the domain</p>
+        </div>
+    </button>
+    </form>
+    <form class = "card">
+    <button formAction='https://mindkind.life/'>
+        <img src={Mind} class="card-img-top" alt="MindKind"></img>
+        <div class="card-body">
+            <h5 class="card-title">MindKind</h5>
+            <p class="card-text"> MindKind connects local businesses with people who want to experience their community. It is the social platform people use to access daily deals and events in the community.</p>
         </div>
     </button>
     </form>
