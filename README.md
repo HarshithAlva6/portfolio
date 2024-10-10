@@ -79,3 +79,4 @@ react-pdf
 react-github-calendar
 express
 font-awesome packages (3)
+frame-motion
