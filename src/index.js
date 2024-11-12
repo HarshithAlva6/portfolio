@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import About from './page/about';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +11,6 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />}></Route>
-        <Route path="also" element={<About />}></Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
