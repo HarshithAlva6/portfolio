@@ -13,7 +13,7 @@ const TextRotator = () => {
     }, 3000); // Change text every 3 seconds
 
     return () => clearInterval(interval); // Cleanup on unmount
-  }, [index]);
+  }, [texts, index]);
 
   return (
     <motion.h1
