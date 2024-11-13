@@ -8,7 +8,7 @@ const Info = () => {
         <div class="info">
             <h1>Harshith Harijeevan</h1>
             <p>A Web Developer who is passionate about the world of AI. &#128513;</p>
-            <a href="http://portfolioV2--harshalva.netlify.app" target="_blank">
+            <a href="http://portfolioV2--harshalva.netlify.app" target="_blank" rel="noreferrer">
             <RotatingImage /></a>
         </div>
     </div>
