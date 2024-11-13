@@ -1,19 +1,8 @@
-import React, {useRef, useState} from 'react';
+import React from 'react';
 import '../App.css';
 import RotatingImage from '../components/rotatingimage';
 
 const Info = () => {
-    const videoRef = useRef(null); // Reference to the video element
-    const [isPlaying, setIsPlaying] = useState(true); // Initial state set to auto-play
-
-    const handleVideoClick = () => {
-        if (isPlaying) {
-            videoRef.current.pause(); // Pause if it's playing
-        } else {
-            videoRef.current.play(); // Play if it's paused
-        }
-        setIsPlaying(!isPlaying); // Toggle play/pause state
-    };
     return (
     <div id = "about">
         <div class="info">
