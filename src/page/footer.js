@@ -6,11 +6,7 @@ const Footer = () => {
     <div class = "shadow">
     <CDBContainer>
       <CDBBox
-        display="flex"
-        justifyContent="between"
-        alignItems="center"
-        className="mx-auto py-4 flex-wrap"
-      >
+          className="flex flex-col md:flex-row md:justify-between items-center mx-auto py-4 space-y-4 md:space-y-0">
         <CDBBox>
           <small className="ms-2 mob">&copy; 2023 Harshith Harijeevan. All rights reserved.</small>
         </CDBBox>

@@ -3,11 +3,11 @@ import '../App.css';
 import Prog from '../images/programmer.jpg';
 import GitHubCalendar from 'react-github-calendar';
 import Carousel from './carousel';
-import js from '../images/skill/js.webp';
+import js from '../images/skill/js.png';
 import py from '../images/skill/python.png';
 import html from '../images/skill/html.png';
 import react from '../images/skill/react.webp';
-import next from '../images/skill/next.png';
+import next from '../images/skill/next.webp';
 import java from '../images/skill/java.png';
 import tail from '../images/skill/tail.png';
 import spring from '../images/skill/spring.png';
@@ -31,7 +31,7 @@ const About = () => {
     return (
     <div className = "whiten">
     <div id = "about">
-        <div class = "col-sm-6">
+        <div class = "hidden md:col-sm-6">
             <img src={Prog} alt="Logo"/>
         </div>
         <div class = "w-full mx-10 me">
