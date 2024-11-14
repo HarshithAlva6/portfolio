@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouseUser, faAddressCard, faComputer, faFile } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard, faComputer, faFile, faHomeUser } from '@fortawesome/free-solid-svg-icons';
 import TextRotator from '../helper/TextRotator';
 
 const Navi = () => {
@@ -14,19 +14,39 @@ const Navi = () => {
         <>
             <TextRotator />
             <h2 className='my-heading2'>Welcome to my Space &#128513;</h2>
-                <nav className="navbar navbar-light">
-                    <div className="navbar-nav">
+                <nav className="navbar">
+                    <div className="navbar-nav space-y-4">
                         <a className="nav-link" aria-current="page" href="#home" onClick={goHome}>
-                            <FontAwesomeIcon icon={faHouseUser} size="lg" /> Home
+                        <div className="flex items-center space-x-3">
+                            <span className="w-6 flex justify-center">
+                            <FontAwesomeIcon icon={faHomeUser} size="lg" />
+                            </span>
+                            <span className="text-lg font-bold">Home</span>
+                        </div>
                         </a>
                         <a className="nav-link" href="#projects" onClick={goHome}>
-                            <FontAwesomeIcon icon={faComputer} size="lg" /> Experience
+                        <div className="flex items-center space-x-3">
+                            <span className="w-6 flex justify-center">
+                            <FontAwesomeIcon icon={faComputer} size="lg" />
+                            </span>
+                            <span className="text-lg font-bold">Experience</span>
+                        </div>
                         </a>
                         <a className="nav-link" href="#carousel2" onClick={goHome}>
-                            <FontAwesomeIcon icon={faAddressCard} size="lg" /> Certified
+                        <div className="flex items-center space-x-3">
+                            <span className="w-6 flex justify-center">
+                            <FontAwesomeIcon icon={faAddressCard} size="lg" />
+                            </span>
+                            <span className="text-lg font-bold">Certified</span>
+                        </div>
                         </a>
                         <a className="nav-link" href="#back" tabIndex="-1" onClick={goHome}>
-                            <FontAwesomeIcon icon={faFile} size="lg" /> Resume
+                        <div className="flex items-center space-x-3">
+                            <span className="w-6 flex justify-center">
+                            <FontAwesomeIcon icon={faFile} size="lg" />
+                            </span>
+                            <span className="text-lg font-bold">Resume</span>
+                        </div>
                         </a>
                     </div>
                 </nav>

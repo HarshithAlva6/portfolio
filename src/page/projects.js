@@ -4,27 +4,20 @@ import '../App.css';
 import wow from '../images/danske.png';
 import xcel from '../images/xcelerator.jpg';
 import Mind from '../images/MindKind.jpg';
+import biz from '../images/biz.jpg';
 import Carousel2 from './carousel2';
 
 const items = [
   {
     id: 1,
-    title: 'Danske IT (Mainframes)',
-    subtitle: 'COBOL and PL/I projects',
-    description: 'Fulfilled hands-on training to create 2 projects on COBOL and PL/I, which comprise the legacy systems. This is a part of Danica Pensions injury and customer systems.',
+    title: 'Danske IT',
+    subtitle: 'Modernization and Automation',
+    description: 'Fulfilled hands-on training to create 2 projects on COBOL and PL/I, which comprise the legacy systems. This is a part of Danica Pensions injury and customer systems. Implemented front-end as part of a pilot project. Switching from 40% of the legacy systems which used Gemini and COBOL to the newest decentralized ones like ReactJS and cloud servers.',
     image: wow,
-    link: 'https://danskebank.com/groupit'
+    link: 'https://danskebank.com/no/karriere/fagspesialist/group-it'
   },
   {
     id: 2,
-    title: 'Danske IT (MERN Stack)',
-    subtitle: 'Front-end Development',
-    description: 'Implemented front-end as part of a pilot project. Switching from 40% of the legacy systems which used Gemini and COBOL to the newest decentralized ones like ReactJS and cloud servers.',
-    image: wow,
-    link: 'https://danskebank.com/groupit'
-  },
-  {
-    id: 3,
     title: 'Xcelerator',
     subtitle: 'Educational Content',
     description: 'Procure, expand, and dispense engaging content for students to get real-world context about what they learn on a daily basis. Generate 1 pager notes, which also strengthened the knowledge of the domain',
@@ -32,25 +25,37 @@ const items = [
     link: 'https://xcelerator.ninja/'
   },
   {
-    id: 4,
+    id: 3,
     title: 'MindKind',
     subtitle: 'Local Business Connection',
     description: 'MindKind connects local businesses with people who want to experience their community. It is the social platform people use to access daily deals and events in the community.',
     image: Mind,
     link: 'https://mindkind.life/'
+  },
+  {
+    id: 4,
+    title: 'BizInc',
+    subtitle: 'UI/UX Designer',
+    description: 'Reduced design iterations and prototyping by 60% using Figma in KANBAN sprint for an employer’s portal',
+    image: biz,
+    link: 'https://www.bizinc.io/'
   }
 ];
 
 const Projects = () => {
   const [selectedId, setSelectedId] = useState(null);
 
+  const truncateText = (text, limit) => {
+    return text.length > limit ? text.substring(0, limit) + '...' : text;
+  };
+
   return (
     <div id="projects">
-      <h2 style={{ marginLeft: "50%" }}>Work Experience</h2>
+      <h2 className = "head ml-50p pt-5">Work Experience</h2>
       <header className="projects">
         {items.map(item => (
           <motion.div 
-            className="card"
+            className="card cursor-pointer"
             key={item.id}
             layoutId={item.id}
             onClick={() => setSelectedId(item.id)}
@@ -61,7 +66,7 @@ const Projects = () => {
               <motion.img src={item.image} className="card-img-top" alt={item.title} />
               <div className="card-body">
                 <h5 className="card-title">{item.title}</h5>
-                <p className="card-text">{item.description}</p>
+                <p className="card-text">{truncateText(item.description, 100)}</p>
               </div>
           </motion.div>
         ))}
