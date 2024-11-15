@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       margin: {
         '50p': '50%', 
+      },
+      padding: {
+        '12vw': '12vw',
       }
     },
   },

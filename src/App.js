@@ -9,7 +9,7 @@ import Navi from './page/navi';
 import About from './page/about';
 
 function App() {
-  const [isScrollable, setIsScrollable] = useState(false);
+  const [isScrollable, setIsScrollable] = useState(true);
   const [navPosition, setNavPosition] = useState(0);
 
 
@@ -19,13 +19,15 @@ function App() {
 
       if (resumeSection) { // Check if resumeSection is not null
         const resumeOffsetTop = resumeSection.getBoundingClientRect().top + window.scrollY; // Get offset from the top
+        console.log(resumeSection.getBoundingClientRect().top);
         const documentHeight = document.documentElement.scrollHeight;
+        const windowHeight = window.innerHeight;
 
         // Check if the Resume section is in the viewport
-        if (window.scrollY >= resumeOffsetTop && window.scrollY < documentHeight - window.innerHeight) {
+        if (window.scrollY >= resumeOffsetTop && window.scrollY < documentHeight - windowHeight) {
           setIsScrollable(true);
           setNavPosition(resumeOffsetTop); // Update position
-        } else if (window.scrollY >= documentHeight - window.innerHeight){
+        } else if (window.scrollY >= documentHeight - windowHeight){
           setIsScrollable(true);
         }
           else {
@@ -40,7 +42,7 @@ function App() {
   }, []);
   return ( 
     <div className="App">
-      <div className="vertical-nav" style={{ position: isScrollable ? 'absolute' : 'fixed', top: isScrollable ? navPosition : 0 }}>
+      <div className="vertical-nav" style={window.innerWidth > 768 ? { position: isScrollable ? 'absolute' : 'fixed', top: isScrollable ? navPosition : 0}:{}}>
         <Navi />
       </div>
       <div className='content'>

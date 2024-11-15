@@ -9,7 +9,7 @@
   @apply mt-3 text-lg font-medium tracking-tight sm:text-xl;
 }
 .head {
-  @apply text-4xl font-semibold tracking-tight sm:text-5xl pb-5;
+  @apply text-2xl font-semibold tracking-tight md:text-5xl pb-5;
 }
 
 html {
@@ -17,7 +17,7 @@ html {
 }
 .App {
   text-align: center;
-  background-color: #240090;
+  background-color: #2492ff;
 }
 
 .App-logo {
@@ -25,27 +25,8 @@ html {
   pointer-events: none;
 }
 
-.info {
-  background: url(images/moon.jpg);
-  min-height: 100vh;
-  text-align: justify;
-  padding: 10% 5% 5% 50%;
-  justify-content: left;
-  color: rgb(0, 0, 0);
-  background-size: cover;
-  background-position: center;
-}
 #projects {
-  background-color: #2975c1;
   background: linear-gradient(to bottom, #2975c1, #240090);
-}
-.projects {
-  margin-left: 50%;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-items: flex-end;
-  font-size: 12px;
-  border-radius: 15px 15px;
 }
 
 .card {
@@ -73,24 +54,8 @@ html {
     transform: translateY(3px);
   }
 
-.vertical-nav {
-  width: 50%; /* Fixed left half */
-  justify-content: center;
-  align-items: left;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  padding: 10% 0;
-  z-index: 1;
-}
-
 .whiten {
   background-color: white;
-}
-#about {
-  display: flex;
-  flex-direction: row;
 }
 
 html, body {
@@ -102,18 +67,6 @@ html, body {
   display: flex;
   height: 100%;
   overflow-x: hidden;
-}
-
-.content {
-  width: 100%;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
-
-.navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .nav-link {
@@ -129,15 +82,75 @@ html, body {
   padding: 10px;
 }
 
-.navbar-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+@media (max-width: 768px){
+  .vertical-nav .my-heading2{
+    display: none;
+  }
+  .vertical-nav .navbar-nav{
+    display: none;
+  }
+  .info {
+    background: url(images/moon.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: justify;
+    justify-content: center;
+    padding: 5% 10%;
+  }
+}
+@media (min-width: 768px){
+  .info {
+    background: url(images/moon.jpg);
+    min-height: 100vh;
+    text-align: justify;
+    padding: 10% 5% 5% 50%;
+    justify-content: left;
+    color: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+  }
+  .vertical-nav {
+    width: 50%; /* Fixed left half */
+    justify-content: center;
+    align-items: left;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10% 0;
+    z-index: 1;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .content {
+    width: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  .projects {
+    margin-left: 50%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: flex-end;
+    font-size: 12px;
+    border-radius: 15px 15px;
+  }
+  #about {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
-
 .cont {
-  margin: 0 20%;
+  margin: 10% 20% 0 20%;
 }
 .col-sm-6 img {
     width: 100%;
@@ -153,41 +166,22 @@ html, body {
   text-align: justify;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-.me {
-  text-align: center;
-}
-
-.me h1 {
-  margin-top: 50px;
-}
 .navbar-collapse {
   float: left;
 }
 
 #back {
-  padding-left: 50%;
+  padding-top: 5%;
   background-color: #240090;
   background: linear-gradient(to bottom,#240090, #0c0032);
-  display: flex;
   justify-content: center;
   align-items: center;
-}
-#resumes {
-  margin: 0 auto;
-  width: 50vh;
-  height: auto;
-  border: 2px solid black;
-  margin: 20%;
 }
 
 .cert {
   object-fit: contain;
   max-width: 100%;
-  margin: 10%;
+  margin: 10% 10% 0 10%;
 }
 #carouselExampleCaptions1 h1, .cont h1 {
   text-align: center;
@@ -234,10 +228,6 @@ h1 {
 
 .card.selected-card:hover {
   background-color: rgba(240, 240, 240, 0.8); /* Darker shade of white */
-}
-
-#carousel2 {
-  margin-left: 50%;
 }
 
 @keyframes App-logo-spin {

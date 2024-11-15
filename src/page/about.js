@@ -31,13 +31,13 @@ const About = () => {
     return (
     <div className = "whiten">
     <div id = "about">
-        <div class = "hidden md:col-sm-6">
+        <div class = "md:col-sm-6">
             <img src={Prog} alt="Logo"/>
         </div>
-        <div class = "w-full mx-10 me">
+        <div class = "w-full mx-10">
             <div class = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center items-center w-full pt-5">
             {skillImages.map((image, index) => (
-                        <img key={index} src={image} alt={`Skill ${index + 1}`} className="w-30 h-30"/>
+                        <img key={index} src={image} alt={`Skill ${index + 1}`} className="w-[50vw] md:w-30 h-30"/>
             ))}
             </div>
         </div>

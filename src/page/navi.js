@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressCard, faComputer, faFile, faHomeUser } from '@fortawesome/free-solid-svg-icons';
 import TextRotator from '../helper/TextRotator';
+import tar from '../images/tar.webp';
 
 const Navi = () => {
     const navigate = useNavigate(); 
@@ -12,6 +13,7 @@ const Navi = () => {
     };
     return(
         <>
+            <a href="http://harshalva.netlify.app"><img src={tar} alt="Go to V1?" className = "fixed top-0 left-0 w-20 h-20 z-50"/></a>
             <TextRotator />
             <h2 className='my-heading2'>Welcome to my Space &#128513;</h2>
                 <nav className="navbar">

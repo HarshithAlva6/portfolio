@@ -9,7 +9,7 @@ import wpk from '../images/coursera/wbk.jpg';
 
 const Carousel2 = () => {
     return(
-        <div id="carousel2">
+        <div id="carousel2" className='md:ml-50p'>
             <div id="carouselExampleCaptions2" class="carousel slide cert" data-bs-ride="false">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
