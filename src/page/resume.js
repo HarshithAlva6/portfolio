@@ -22,13 +22,17 @@ const Resume = () => {
         return () => window.removeEventListener('resize', updateScale);
     }, []);
     return (
-        <div id = "back">
-            <Document file={resumeFile} id='resumes' className='block mx-[25vw] md:ml-[50vw]'>
+        <div id = "back" className="flex min-h-screen"> 
+            <div className="w-1/2 bg-gray-100 hidden sm:block">
+            </div>
+            <div className="w-1/2 flex justify-center items-center">
+            <Document file={resumeFile} id='resumes'>
                 <Page renderTextLayer={false}
                     renderAnnotationLayer={false}
                     customTextRenderer={false}
                     pageNumber={1} scale={scale} />
             </Document>
+            </div>
         </div>
     );
 }

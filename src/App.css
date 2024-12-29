@@ -230,6 +230,13 @@ h1 {
   background-color: rgba(240, 240, 240, 0.8); /* Darker shade of white */
 }
 
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

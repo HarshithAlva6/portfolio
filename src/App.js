@@ -48,7 +48,7 @@ function App() {
       <div className='content'>
       <Info />
       <Projects />
-      <Resume id="back"/>
+      <Resume/>
       <About />
       <Footer />
       </div>

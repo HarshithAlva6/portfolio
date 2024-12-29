@@ -45,7 +45,10 @@ const About = () => {
     <Carousel />
     <div class = 'cont'>
         <h2 className = "head">GitHub Contributions</h2>
-        <GitHubCalendar username="HarshithAlva6" /></div>
+        <div className="calendar-container">
+            <GitHubCalendar username="HarshithAlva6" />
+        </div>
+    </div>
     </div>
     );
 }
