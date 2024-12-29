@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 55px;
@@ -14,6 +18,7 @@ html {
 
 .info {
   background: url(images/moon.jpg);
+  margin-top: 60px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -176,7 +181,7 @@ h2, h1 {
 @media screen and (max-width: 400px) {
   #resumes {
     margin: 0;
-    width: 100%;
+    width: 75%;
   }
   .react-pdf__Page__canvas {
     width: 100% !important;
