@@ -7,7 +7,7 @@ import { faHouseUser, faAddressCard, faComputer, faFile} from '@fortawesome/free
 const Navi = () => {
     const navigate = useNavigate(); 
     const goHome = () => {
-      navigate("/"); // New line
+      navigate("/"); 
     };
     return(
     <div class = "top">

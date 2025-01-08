@@ -28,6 +28,7 @@ html {
   color: rgb(0, 0, 0);
   background-size: cover;
   background-position: center;
+  padding: 60px;
 }
 #projects {
   background-color: #2975c1;
@@ -116,7 +117,14 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 50px;
+  padding: 50px;
+}
+@media (max-width: 768px) { 
+  #back {
+      transform: scale(0.8); 
+      padding: 0px;
+      margin-top: 0px;
+  }
 }
 #resumes {
   margin: 0 auto;

@@ -9,7 +9,7 @@ const resume = () => {
     //document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 1 + "px");
     return (
         <div id = "back">
-            <Document file={resumeFile} id='resumes'>
+            <Document file={resumeFile} id='resumes' style={{ transform: "scale(0.8)" }}>
                 <Page renderTextLayer={false}
                     renderAnnotationLayer={false}
                     customTextRenderer={false}
