@@ -14,7 +14,8 @@ const items = [
     subtitle: 'Modernization and Automation',
     description: 'Fulfilled hands-on training to create 2 projects on COBOL and PL/I, which comprise the legacy systems. This is a part of Danica Pensions injury and customer systems. Implemented front-end as part of a pilot project. Switching from 40% of the legacy systems which used Gemini and COBOL to the newest decentralized ones like ReactJS and cloud servers.',
     image: wow,
-    link: 'https://danskebank.com/no/karriere/fagspesialist/group-it'
+    link: 'https://danskebank.com/no/karriere/fagspesialist/group-it',
+    skills: ['COBOL', 'VBA', 'ReactJS', '.NET']
   },
   {
     id: 2,
@@ -22,7 +23,8 @@ const items = [
     subtitle: 'Educational Content',
     description: 'Procure, expand, and dispense engaging content for students to get real-world context about what they learn on a daily basis. Generate 1 pager notes, which also strengthened the knowledge of the domain',
     image: xcel,
-    link: 'https://xcelerator.ninja/'
+    link: 'https://xcelerator.ninja/',
+    skills: ['Excel', 'Word', 'Agile Methodologies']
   },
   {
     id: 3,
@@ -30,7 +32,8 @@ const items = [
     subtitle: 'Local Business Connection',
     description: 'MindKind connects local businesses with people who want to experience their community. It is the social platform people use to access daily deals and events in the community.',
     image: Mind,
-    link: 'https://mindkind.life/'
+    link: 'https://mindkind.life/',
+    skills: ['Next.js', 'Tailwind CSS', 'Vercel', 'Node.js']
   },
   {
     id: 4,
@@ -38,7 +41,8 @@ const items = [
     subtitle: 'UI/UX Designer',
     description: 'Reduced design iterations and prototyping by 60% using Figma in KANBAN sprint for an employer’s portal',
     image: biz,
-    link: 'https://www.bizinc.io/'
+    link: 'https://www.bizinc.io/',
+    skills: ['KANBAN', 'Figma', 'UI/UX']
   }
 ];
 
@@ -94,8 +98,8 @@ const Projects = () => {
           >
             <button
             onClick={(event) => {
-            event.stopPropagation(); // Prevent the click from going to the card
-            setSelectedId(null); // Close modal
+            event.stopPropagation(); 
+            setSelectedId(null); 
             }}
             style={{
             position: 'absolute',
@@ -122,6 +126,13 @@ const Projects = () => {
               <p className="card-text">
                 {items.find(item => item.id === selectedId).description}
               </p>
+              <div>
+                <ul class="flex flex-wrap justify-center gap-4 p-2">
+                {items.find(item => item.id === selectedId).skills.map(skill => (
+                    <li class="px-4 py-2 flex items-center rounded-full border border-black-300 bg-gray-200 text-black hover:bg-gray-300 hover:shadow-lg transition-all">{skill}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </motion.div>
         )}
