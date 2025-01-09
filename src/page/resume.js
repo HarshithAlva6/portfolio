@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import resumeFile from '../cv/Harshith_H_CV.pdf';
+import resumeFile from '../cv/HarshithH_Resume.pdf';
 import "../App.css";
 import { Document, Page, pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
