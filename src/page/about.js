@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../App.css';
 import Prog from '../images/programmer.jpg';
 import GitHubCalendar from 'react-github-calendar';
@@ -28,6 +28,30 @@ const skillImages = [
 ];
 
 const About = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+      });
+
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: value,
+        }));
+      };
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); 
+        alert('Thank you for your message! We will get back to you soon.');
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+        window.scrollTo(0, 0);
+      };
     return (
     <div className = "whiten">
         <div id = "about">
@@ -50,23 +74,23 @@ const About = () => {
             </div>
         </div>
         <div class="max-w-2xl mx-auto p-6 mt-6 border-2 bg-[#ecf0f1] rounded-lg shadow-lg">
-            <form name="contact" method="POST" netlify class="space-y-5 px-4">
+            <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true" class="space-y-5 px-4">
                 <input type="hidden" name="form-name" value="contact" />
                 <div class="flex items-center">
                     <label for="name" class="w-1/3 text-lg font-medium">Name</label>
-                    <input type="text" name="name" id="name" placeholder="How would I refer you?" required
+                    <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} placeholder="How would I refer you?" required
                         class="w-full mt-1 px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     />
                 </div>
                 <div class="flex items-center">
                     <label for="email" class="w-1/3 text-lg font-medium">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Means to contact via mail?" required
+                    <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} placeholder="Means to contact via mail?" required
                         class="w-full mt-1 px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     />
                 </div>
                 <div>
                     <label for="message" class="block text-lg font-medium">Your Message</label>
-                    <textarea name="message" id="message" placeholder="What would you like to discuss or enquire..." required
+                    <textarea name="message" id="message" value={formData.message} onChange={handleChange} placeholder="What would you like to discuss or enquire..." required
                         class="w-full mt-1 px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                         rows="4"
                     ></textarea>
