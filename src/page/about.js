@@ -30,25 +30,55 @@ const skillImages = [
 const About = () => {
     return (
     <div className = "whiten">
-    <div id = "about">
-        <div class = "md:col-sm-6">
-            <img src={Prog} alt="Logo"/>
-        </div>
-        <div class = "w-full mx-10">
-            <div class = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center items-center w-full pt-5">
-            {skillImages.map((image, index) => (
-                        <img key={index} src={image} alt={`Skill ${index + 1}`} className="w-[50vw] md:w-30 h-30"/>
-            ))}
+        <div id = "about">
+            <div class = "md:col-sm-6">
+                <img src={Prog} alt="Logo"/>
+            </div>
+            <div class = "w-full mx-10">
+                <div class = "grid grid-cols-4 gap-2 justify-items-center items-center w-full pt-5">
+                {skillImages.map((image, index) => (
+                            <img key={index} src={image} alt={`Skill ${index + 1}`} className="w-full max-w-[140px] md:max-w-[140px] lg:max-w-[140px] h-auto"/>
+                ))}
+                </div>
             </div>
         </div>
-    </div>
-    <Carousel />
-    <div class = 'cont'>
-        <h2 className = "head">GitHub Contributions</h2>
-        <div className="calendar-container">
-            <GitHubCalendar username="HarshithAlva6" />
+        <Carousel />
+        <div class = 'cont'>
+            <h2 className = "my-heading">GitHub Contributions</h2>
+            <div className="calendar-container">
+                <GitHubCalendar username="HarshithAlva6" />
+            </div>
         </div>
-    </div>
+        <div class="max-w-2xl mx-auto p-6 mt-6 border-2 bg-[#ecf0f1] rounded-lg shadow-lg">
+            <form name="contact" method="POST" data-netlify="true" class="space-y-5 px-4">
+                <input type="hidden" name="form-name" value="contact" />
+                <div class="flex items-center">
+                    <label for="name" class="w-1/3 text-lg font-medium">Name</label>
+                    <input type="text" name="name" id="name" placeholder="How would I refer you?" required
+                        class="w-full mt-1 px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    />
+                </div>
+                <div class="flex items-center">
+                    <label for="email" class="w-1/3 text-lg font-medium">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Means to contact via mail?" required
+                        class="w-full mt-1 px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    />
+                </div>
+                <div>
+                    <label for="message" class="block text-lg font-medium">Your Message</label>
+                    <textarea name="message" id="message" placeholder="What would you like to discuss or enquire..." required
+                        class="w-full mt-1 px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                        rows="4"
+                    ></textarea>
+                </div>
+                <div>
+                    <button type="submit"
+                        class="w-1/2 px-4 py-2 text-[#ecf0f1] bg-[#cb4335] hover:bg-[#943126] rounded-lg shadow-md focus:ring-2 focus:ring-blue-500"
+                    >Send
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
     );
 }

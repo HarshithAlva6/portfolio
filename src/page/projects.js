@@ -55,7 +55,7 @@ const Projects = () => {
 
   return (
     <div id="projects">
-      <h2 className = "head md:ml-50p pt-5">Work Experience</h2>
+      <h2 className = "my-heading md:ml-50p pt-5">Work Experience</h2>
       <header className="projects md:ml-50p">
         {items.map(item => (
           <motion.div 
