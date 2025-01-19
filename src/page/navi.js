@@ -13,7 +13,7 @@ const Navi = () => {
     };
     return(
         <>
-            <a href="http://harshalva.netlify.app"><img src={tar} alt="Go to V1?" className = "fixed top-0 left-0 w-20 h-20 z-50"/></a>
+            <a href="http://main--harshalva.netlify.app"><img src={tar} alt="Go to V1?" className = "fixed top-0 left-0 w-20 h-20 z-50"/></a>
             <TextRotator />
             <h2 className='my-heading2'>Welcome to my Space &#128513;</h2>
                 <nav className="navbar">
