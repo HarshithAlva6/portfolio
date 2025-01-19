@@ -74,7 +74,8 @@ const About = () => {
             </div>
         </div>
         <div class="max-w-2xl mx-auto p-6 mt-6 border-2 bg-[#ecf0f1] rounded-lg shadow-lg">
-            <form name="contact" method="POST" netlify class="space-y-5 px-4">
+            <form name="contact" method="POST" data-netlify="true" class="space-y-5 px-4" onSubmit={handleSubmit}>
+                <input type="hidden" name="form-name" value="contact" />
                 <div class="flex items-center">
                     <label for="name" class="w-1/3 text-lg font-medium">Name</label>
                     <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} placeholder="How would I refer you?" required
