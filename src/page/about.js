@@ -44,7 +44,18 @@ const About = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        alert('Thank you for your message! We will get back to you soon.');
+        const form = e.target;
+
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(new FormData(form)).toString(),
+        })
+          .then(() => {
+            alert('Thank you for your message! Harshith will get back to you soon.');
+          })
+          .catch((error) => alert("Form submission error: " + error));
+      
         setFormData({
           name: '',
           email: '',
