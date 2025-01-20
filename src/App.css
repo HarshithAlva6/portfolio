@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 .my-heading {
-  @apply text-silver text-4xl font-bold tracking-tight sm:text-5xl;
+  @apply text-[#c1c1c1] text-4xl font-bold tracking-tight sm:text-5xl; /* Silver color */
+  text-shadow: 
+    2px 2px 5px rgba(0, 0, 0, 1), /* Stronger shadow to the right-bottom */
+    -2px -2px 5px rgba(0, 0, 0, 1); /* Stronger shadow to the left-top */
 }
 .my-heading2 {
   @apply text-white mt-3 text-lg font-medium tracking-tight sm:text-xl;
@@ -54,6 +57,7 @@ html, body {
   height: 100%;
   margin: 0;
 }
+
 
 .layout {
   display: flex;

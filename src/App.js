@@ -7,6 +7,7 @@ import Footer from "./page/footer";
 import "./App.css";
 import Navi from './page/navi';
 import About from './page/about';
+import CustomCursor from './helper/CustomCursor';
 
 function App() {
   const [isScrollable, setIsScrollable] = useState(true);
@@ -17,7 +18,7 @@ function App() {
     const handleScroll = () => {
       const resumeSection = document.getElementById('back');
 
-      if (resumeSection) { // Check if resumeSection is not null
+      if (resumeSection) { 
         const resumeOffsetTop = resumeSection.getBoundingClientRect().top + window.scrollY; // Get offset from the top
         console.log(resumeSection.getBoundingClientRect().top);
         const documentHeight = document.documentElement.scrollHeight;
@@ -26,7 +27,7 @@ function App() {
         // Check if the Resume section is in the viewport
         if (window.scrollY >= resumeOffsetTop && window.scrollY < documentHeight - windowHeight) {
           setIsScrollable(true);
-          setNavPosition(resumeOffsetTop); // Update position
+          setNavPosition(resumeOffsetTop);
         } else if (window.scrollY >= documentHeight - windowHeight){
           setIsScrollable(true);
         }
@@ -42,6 +43,7 @@ function App() {
   }, []);
   return ( 
     <div className="App">
+      <CustomCursor />
       <div className="vertical-nav" style={window.innerWidth > 768 ? { position: isScrollable ? 'absolute' : 'fixed', top: isScrollable ? navPosition : 0}:{}}>
         <Navi />
       </div>
