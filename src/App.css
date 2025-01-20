@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 .my-heading {
-  @apply text-4xl font-bold tracking-tight sm:text-5xl;
+  @apply text-silver text-4xl font-bold tracking-tight sm:text-5xl;
 }
 .my-heading2 {
-  @apply mt-3 text-lg font-medium tracking-tight sm:text-xl;
+  @apply text-white mt-3 text-lg font-medium tracking-tight sm:text-xl;
 }
 .head {
   @apply text-2xl font-semibold tracking-tight md:text-5xl pb-5;
@@ -17,16 +17,12 @@ html {
 }
 .App {
   text-align: center;
-  background-color: #2492ff;
+  background-color: #0f172a;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-#projects {
-  background: linear-gradient(to bottom, #2975c1, #240090);
 }
 
 .card {
@@ -53,10 +49,6 @@ html {
     box-shadow: 0 5px #666;
     transform: translateY(3px);
   }
-
-.whiten {
-  background-color: white;
-}
 
 html, body {
   height: 100%;
@@ -90,7 +82,7 @@ html, body {
     display: none;
   }
   .info {
-    background: url(images/moon.jpg);
+    /*background: url(images/moon.jpg);*/
     background-size: cover;
     background-position: center;
     text-align: justify;
@@ -100,7 +92,7 @@ html, body {
 }
 @media (min-width: 768px){
   .info {
-    background: url(images/moon.jpg);
+    /*background: url(images/moon.jpg);*/
     min-height: 100vh;
     text-align: justify;
     padding: 10% 5% 5% 50%;
@@ -146,6 +138,7 @@ html, body {
   #about {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -172,10 +165,17 @@ html, body {
 
 #back {
   padding-top: 5%;
-  background-color: #240090;
-  background: linear-gradient(to bottom,#240090, #0c0032);
+  background: linear-gradient(to bottom,#1f3057, #25184c);
   justify-content: center;
   align-items: center;
+}
+
+#projects {
+  background: linear-gradient(to bottom, #0f172a, #1f3057);
+}
+
+.whiten {
+  background: linear-gradient(to bottom, #25184c, #240090);
 }
 
 .cert {

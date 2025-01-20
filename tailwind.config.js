@@ -8,6 +8,9 @@ module.exports = {
       },
       padding: {
         '12vw': '12vw',
+      },
+      colors: {
+        silver: '#c1c1c1',
       }
     },
   },

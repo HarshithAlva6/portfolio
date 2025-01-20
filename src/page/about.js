@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../App.css';
-import Prog from '../images/programmer.jpg';
+import Prog from '../images/programmer.png';
 import GitHubCalendar from 'react-github-calendar';
 import Carousel from './carousel';
 import js from '../images/skill/js.png';
@@ -65,11 +65,11 @@ const About = () => {
       };
     return (
     <div className = "whiten">
-        <div id = "about">
-            <div class = "md:col-sm-6">
+        <div id = "about" className="flex flex-row space-x-4">
+            <div className="left flex-40 w-full md:w-full">
                 <img src={Prog} alt="Logo"/>
             </div>
-            <div class = "w-full mx-10">
+            <div className="right flex-60 w-full md:w-full mx-10">
                 <div class = "grid grid-cols-4 gap-2 justify-items-center items-center w-full pt-5">
                 {skillImages.map((image, index) => (
                             <img key={index} src={image} alt={`Skill ${index + 1}`} className="w-full max-w-[140px] md:max-w-[140px] lg:max-w-[140px] h-auto"/>

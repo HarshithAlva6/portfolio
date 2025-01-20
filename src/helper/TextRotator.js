@@ -18,7 +18,7 @@ const TextRotator = () => {
   return (
     <motion.h1
       className='my-heading'
-      key={currentText} // Ensure animation plays on text change
+      key={currentText} 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

@@ -21,33 +21,33 @@ const Navi = () => {
                         <a className="nav-link" aria-current="page" href="#home" onClick={goHome}>
                         <div className="flex items-center space-x-3">
                             <span className="w-6 flex justify-center">
-                            <FontAwesomeIcon icon={faHomeUser} size="lg" />
+                            <FontAwesomeIcon icon={faHomeUser} size="lg" class="text-silver" />
                             </span>
-                            <span className="text-lg font-bold">Home</span>
+                            <span className="text-lg text-white font-bold">Home</span>
                         </div>
                         </a>
                         <a className="nav-link" href="#projects" onClick={goHome}>
                         <div className="flex items-center space-x-3">
                             <span className="w-6 flex justify-center">
-                            <FontAwesomeIcon icon={faComputer} size="lg" />
+                            <FontAwesomeIcon icon={faComputer} size="lg" class="text-silver" />
                             </span>
-                            <span className="text-lg font-bold">Experience</span>
+                            <span className="text-lg text-white font-bold">Experience</span>
                         </div>
                         </a>
                         <a className="nav-link" href="#carousel2" onClick={goHome}>
                         <div className="flex items-center space-x-3">
                             <span className="w-6 flex justify-center">
-                            <FontAwesomeIcon icon={faAddressCard} size="lg" />
+                            <FontAwesomeIcon icon={faAddressCard} size="lg" class="text-silver" />
                             </span>
-                            <span className="text-lg font-bold">Certified</span>
+                            <span className="text-lg text-white font-bold">Certified</span>
                         </div>
                         </a>
                         <a className="nav-link" href="#back" tabIndex="-1" onClick={goHome}>
                         <div className="flex items-center space-x-3">
                             <span className="w-6 flex justify-center">
-                            <FontAwesomeIcon icon={faFile} size="lg" />
+                            <FontAwesomeIcon icon={faFile} size="lg" class="text-silver" />
                             </span>
-                            <span className="text-lg font-bold">Resume</span>
+                            <span className="text-lg text-white font-bold">Resume</span>
                         </div>
                         </a>
                     </div>
