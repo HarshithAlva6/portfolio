@@ -180,6 +180,7 @@ html, body {
 
 .whiten {
   background: linear-gradient(to bottom, #25184c, #240090);
+  padding: 30px;
 }
 
 .cert {
@@ -238,6 +239,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: whitesmoke;
 }
 
 
