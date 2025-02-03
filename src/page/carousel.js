@@ -1,55 +1,50 @@
-import React from 'react';
-import coursera from '../images/Coursera.jpg';
-import data from '../images/Data Science.jpg';
-import dev from '../images/Dev.jpg';
-import js from '../images/JavaScript.jpg';
-import spring from '../images/Spring.jpg';
-import tf from '../images/TensorFlow.jpg';
+import React, {useEffect} from 'react';
 
 const Carousel = () => {
+    const data = [
+        {
+            imageUrl: "https://api.microlink.io/?url=https%3A%2F%2Fsurvey-liart-two.vercel.app%2Fformbuilder&overlay.browser=dark&screenshot=true&embed=screenshot.url",
+            projectUrl: "https://survey-liart-two.vercel.app/formbuilder",
+            title: "Survey Form Builder",
+            desc: "An app that allows physicians to create, manage, and assign custom surveys to patients. It features a drag-and-drop interface, supports multiple question types, which helps store survey data and responses.",
+            git: "https://github.com/HarshithAlva6/survey"
+        },
+        {
+            imageUrl: "https://api.microlink.io/?url=https%3A%2F%2Fmain--harshalva.netlify.app&overlay.browser=dark&screenshot=true&embed=screenshot.url",
+            projectUrl: "https://main--harshalva.netlify.app",
+            title: "First Portfolio",
+            desc: "My first version of the Portfolio. You can always find the link above too if you click on the telephone booth!",
+            git: "https://github.com/HarshithAlva6/portfolio/tree/main"
+        },
+        {
+            imageUrl: "https://api.microlink.io/?url=https%3A%2F%2Fcryptovote.netlify.app%2F&overlay.browser=dark&screenshot=true&embed=screenshot.url",
+            projectUrl: "https://cryptovote.netlify.app/",
+            title: "Blockchain Project",
+            desc: "Secure and transparent platform to participate in elections, enabling to vote for candidates, delegate voting rights, and access comprehensive election summaries. Also introduced a decentralized marketplace for purchasing NFTs representing political parties.",
+            git: "https://github.com/HarshithAlva6/eVoting"
+        }
+    ]
     return(
-        <div id = "carousel1">
-            <div id="carouselExampleCaptions1" class="carousel slide cert" data-bs-ride="false">
-            <h2 className="my-heading mb-10">Certifications</h2>
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src= {dev} alt="First slide" />
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src= {coursera} alt="Second slide" />
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src={js} alt="Third slide" />
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src={tf} alt="Fourth slide" />
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src={spring} alt="Fifth Slide" />
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src={data} alt="Sixth slide" />
-                    </div>
-                </div>
-                
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>           
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {data.map((proj) => (
+    <div class="flex flex-row glass-effect w-full">
+        <div class="flex flex-col flex-none">
+            <a href={proj.projectUrl} target="_blank" rel="noopener noreferrer">
+                {proj.imageUrl ? (
+                    <img className="w-full h-40 object-cover" src={proj.imageUrl} alt={proj.title} />
+                ) : (
+                    <div className="w-full h-40 bg-gray-300 flex items-center justify-center">Loading...</div>
+                )}
+            </a>
         </div>
+        <div class="flex flex-col text-left ml-4">
+            <h2>{proj.title}</h2>
+            <p class="mt-2">{proj.desc}</p>
+            <a class="glass-button" href={proj.git}>GitHub Access</a>
+        </div>
+    </div>
+    ))}
+    </div>
     );
 }
 export default Carousel;

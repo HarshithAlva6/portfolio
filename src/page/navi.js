@@ -34,7 +34,7 @@ const Navi = () => {
                             <span className="text-lg text-white font-bold">Experience</span>
                         </div>
                         </a>
-                        <a className="nav-link" href="#carousel2" onClick={goHome}>
+                        <a className="nav-link" href="#carousel" onClick={goHome}>
                         <div className="flex items-center space-x-3">
                             <span className="w-6 flex justify-center">
                             <FontAwesomeIcon icon={faAddressCard} size="lg" class="text-silver" />

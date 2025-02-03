@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import dyn from '../images/coursera/dyn.jpg';
 import jen from '../images/coursera/jen.jpg';
 import mdb from '../images/coursera/mdb.jpg';
@@ -6,55 +6,87 @@ import njs from '../images/coursera/njs.jpg';
 import sbh2 from '../images/coursera/sbh2.jpg';
 import sel from '../images/coursera/sel.jpg';
 import wpk from '../images/coursera/wbk.jpg';
+import coursera from '../images/Coursera.jpg';
+import data from '../images/Data Science.jpg';
+import dev from '../images/Dev.jpg';
+import js from '../images/JavaScript.jpg';
+import spring from '../images/Spring.jpg';
+import tf from '../images/TensorFlow.jpg';
 
 const Carousel2 = () => {
-    return(
-        <div id="carousel2" className='md:ml-50p'>
-            <h3 class="my-heading mt-4">Projects</h3>
-            <div id="carouselExampleCaptions2" class="carousel slide cert" data-bs-ride="false">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src= {dyn} alt="First slide" />
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src= {jen} alt="Second slide" />
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src={mdb} alt="Third slide" />
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src={njs} alt="Fourth slide" />
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src={sbh2} alt="Fifth Slide" />
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src={sel} alt="Sixth slide" />
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src={wpk} alt="Seventh slide" />
+    const [showProjects, setShowProjects] = useState(true);
+
+    return (
+        <div id="carousel" className="md:ml-50p">
+            {showProjects && (
+                <div id="carousel1">
+                    <h3 className="my-heading">PROJECTS</h3>
+                    <div id="carouselExampleCaptions2" className="carousel slide cert" data-bs-ride="false">
+                        <div className="carousel-inner">
+                            {[dyn, jen, mdb, njs, sbh2, sel, wpk].map((img, index) => (
+                                <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                                    <img className="d-block w-100" src={img} alt={`Slide ${index + 1}`} />
+                                </div>
+                            ))}
+                        </div>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
-                
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>           
+            )}
+
+            {!showProjects && (
+                <div id="carousel2">
+                    <h2 className="my-heading">CERTIFICATES</h2>
+                    <div id="carouselExampleCaptions1" className="carousel slide cert" data-bs-ride="false">
+                        <div className="carousel-inner">
+                            {[dev, coursera, js, tf, spring, data].map((img, index) => (
+                                <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                                    <img className="d-block w-100" src={img} alt={`Slide ${index + 1}`} />
+                                </div>
+                            ))}
+                        </div>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            )}
+        <div className="flex justify-center py-4">
+            <div 
+                className="flex items-center cursor-pointer w-50 p-1 bg-gray-300 rounded-full"
+                onClick={() => setShowProjects(!showProjects)}
+            >
+                <div 
+                    className={`w-1/2 text-center py-1 rounded-full transition-all ${
+                        showProjects ? "bg-teal-500 text-white" : "bg-gray-300 text-black"
+                    }`}
+                >
+                    Projects
+                </div>
+                <div 
+                    className={`w-1/2 text-center py-1 rounded-full transition-all ${
+                        !showProjects ? "bg-teal-500 text-white" : "bg-gray-300 text-black"
+                    }`}
+                >
+                    Certificates
+                </div>
+            </div>
+        </div>
+
         </div>
     );
-}
+};
+
 export default Carousel2;

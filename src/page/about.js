@@ -32,6 +32,7 @@ const About = () => {
         name: '',
         email: '',
         message: '',
+        sub: ''
       });
 
       const handleChange = (e) => {
@@ -60,6 +61,7 @@ const About = () => {
           name: '',
           email: '',
           message: '',
+          sub: ''
         });
         window.scrollTo(0, 0);
       };
@@ -95,13 +97,19 @@ const About = () => {
                 </div>
                 <div class="flex items-center">
                     <label for="email" class="w-1/3 text-lg font-medium">Email</label>
-                    <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} placeholder="Means to contact via mail?" required
+                    <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} placeholder="Means to contact you via mail?" required
+                        class="w-full mt-1 px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    />
+                </div>
+                <div class="flex items-center">
+                    <label for="sub" class="w-1/3 text-lg font-medium">Subject</label>
+                    <input type="sub" name="sub" id="sub" value={formData.sub} onChange={handleChange} placeholder="What is the topic of Discussion?" required
                         class="w-full mt-1 px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     />
                 </div>
                 <div>
                     <label for="message" class="block text-lg font-medium">Your Message</label>
-                    <textarea name="message" id="message" value={formData.message} onChange={handleChange} placeholder="What would you like to discuss or enquire..." required
+                    <textarea name="message" id="message" value={formData.message} onChange={handleChange} placeholder="A brief summary of the discussion to enquire..." required
                         class="w-full mt-1 px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                         rows="4"
                     ></textarea>

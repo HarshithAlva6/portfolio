@@ -59,12 +59,16 @@ const Projects = () => {
       <header className="projects md:ml-50p">
         {items.map(item => (
           <motion.div 
-            className="card cursor-pointer"
+            className="card cursor-pointer glass-effect !bg-transparent text-white"
             key={item.id}
             layoutId={item.id}
             onClick={() => setSelectedId(item.id)}
             initial={{ opacity: 0 }}
-            animate={{ opacity: selectedId ? (selectedId === item.id ? 1 : 0.5) : 1 }}
+            animate={{ 
+              opacity: selectedId ? (selectedId === item.id ? 1 : 0.5) : 1,
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.8)",
+              background: "rgba(255, 255, 255, 0.1)", 
+            }}
             style={selectedId === item.id ? { zIndex: 10 } : { zIndex: 1 }}
           >
               <motion.img src={item.image} className="card-img-top" alt={item.title} />
