@@ -22,6 +22,13 @@ const Carousel = () => {
             title: "Blockchain Project",
             desc: "Secure and transparent platform to participate in elections, enabling to vote for candidates, delegate voting rights, and access comprehensive election summaries. Also introduced a decentralized marketplace for purchasing NFTs representing political parties.",
             git: "https://github.com/HarshithAlva6/eVoting"
+        },
+        {
+            imageUrl: "https://api.microlink.io/?url=https%3A%2F%2Fto-do-list-delta-fawn.vercel.app%2F&overlay.browser=dark&screenshot=true&embed=screenshot.url",
+            projectUrl: "https://to-do-list-delta-fawn.vercel.app/",
+            title: "To-Do List",
+            desc: "A simple To-Do App that encompasses tools such as Next.js, Tailwind CSS, Express.js, Prisma for ORM and MySQL using Vercel and Railway to host the app.",
+            git: "https://github.com/HarshithAlva6/ToDoList"
         }
     ]
     return(
@@ -31,9 +38,9 @@ const Carousel = () => {
         <div class="flex flex-col flex-none">
             <a href={proj.projectUrl} target="_blank" rel="noopener noreferrer">
                 {proj.imageUrl ? (
-                    <img className="w-full h-40 object-cover" src={proj.imageUrl} alt={proj.title} />
+                    <img className="h-40 object-cover" src={proj.imageUrl} alt={proj.title} />
                 ) : (
-                    <div className="w-full h-40 bg-gray-300 flex items-center justify-center">Loading...</div>
+                    <div className="h-40 bg-gray-300 flex items-center justify-center">Loading...</div>
                 )}
             </a>
         </div>
