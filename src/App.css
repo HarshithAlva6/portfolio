@@ -252,9 +252,6 @@ h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8); 
   color: whitesmoke;
 }
-.glass-button:hover {
-  background-color: #005f73; /* Darker shade on hover */
-}
 
 @keyframes App-logo-spin {
   from {

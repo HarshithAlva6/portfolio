@@ -14,7 +14,8 @@ const items = [
     subtitle: 'Modernization and Automation',
     description: 'Fulfilled hands-on training to create 2 projects on COBOL and PL/I, which comprise the legacy systems. This is a part of Danica Pensions injury and customer systems. Implemented front-end as part of a pilot project. Switching from 40% of the legacy systems which used Gemini and COBOL to the newest decentralized ones like ReactJS and cloud servers.',
     image: wow,
-    link: 'https://danskebank.com/no/karriere/fagspesialist/group-it',
+    //link: 'https://danskebank.com/no/karriere/fagspesialist/group-it',
+    link: 'https://www.linkedin.com/company/danskeindia/',
     skills: ['COBOL', 'VBA', 'ReactJS', '.NET']
   },
   {
@@ -133,7 +134,9 @@ const Projects = () => {
               <div>
                 <ul class="flex flex-wrap justify-center gap-4 p-2">
                 {items.find(item => item.id === selectedId).skills.map(skill => (
-                    <li class="px-4 py-2 flex items-center rounded-full border border-black-300 bg-gray-200 text-black hover:bg-gray-300 hover:shadow-lg transition-all">{skill}</li>
+                    <li onClick={(event) => {
+                      event.stopPropagation();  
+                      }} class="px-4 py-2 flex items-center rounded-full border border-black-300 bg-gray-200 text-black hover:bg-gray-300 hover:shadow-lg transition-all">{skill}</li>
                   ))}
                 </ul>
               </div>

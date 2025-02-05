@@ -1,4 +1,5 @@
-import React, {useEffect} from 'react';
+import React from 'react';
+import { FaGithub, FaDoorOpen } from "react-icons/fa";
 
 const Carousel = () => {
     const data = [
@@ -43,11 +44,14 @@ const Carousel = () => {
                     <div className="h-40 bg-gray-300 flex items-center justify-center">Loading...</div>
                 )}
             </a>
+            <div class="flex flex-row justify-center mt-3 gap-8">
+                <a href={proj.git}><FaGithub size={48}/></a>
+                <a href={proj.projectUrl}><FaDoorOpen size={48}/></a>
+            </div>
         </div>
         <div class="flex flex-col text-left ml-4">
             <h2>{proj.title}</h2>
             <p class="mt-2">{proj.desc}</p>
-            <a class="glass-button" href={proj.git}>GitHub Access</a>
         </div>
     </div>
     ))}

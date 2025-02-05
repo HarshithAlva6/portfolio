@@ -20,7 +20,7 @@ const Carousel2 = () => {
         <div id="carousel" className="md:ml-50p">
             {showProjects && (
                 <div id="carousel1">
-                    <h3 className="my-heading">PROJECTS</h3>
+                    <h3 className="my-heading">Projects</h3>
                     <div id="carouselExampleCaptions2" className="carousel slide cert" data-bs-ride="false">
                         <div className="carousel-inner">
                             {[dyn, jen, mdb, njs, sbh2, sel, wpk].map((img, index) => (
@@ -43,7 +43,7 @@ const Carousel2 = () => {
 
             {!showProjects && (
                 <div id="carousel2">
-                    <h2 className="my-heading">CERTIFICATES</h2>
+                    <h2 className="my-heading">Certificates</h2>
                     <div id="carouselExampleCaptions1" className="carousel slide cert" data-bs-ride="false">
                         <div className="carousel-inner">
                             {[dev, coursera, js, tf, spring, data].map((img, index) => (
