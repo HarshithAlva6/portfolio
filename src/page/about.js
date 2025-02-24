@@ -18,6 +18,7 @@ import mongo from '../images/skill/mongo.png';
 import css from '../images/skill/css.png';
 import c from '../images/skill/c.png';
 import graph from '../images/skill/graphQL.png';
+import DuolingoStats from '../component/DuolingoStats';
 
 
 const skillImages = [
@@ -86,6 +87,7 @@ const About = () => {
                 <GitHubCalendar username="HarshithAlva6" />
             </div>
         </div>
+        <DuolingoStats />
         <div class="max-w-2xl mx-auto p-6 mt-6 border-2 bg-[#ecf0f1] rounded-lg shadow-lg">
             <form name="contact" method="POST" data-netlify="true" class="space-y-5 px-4" onSubmit={handleSubmit}>
                 <input type="hidden" name="form-name" value="contact" />

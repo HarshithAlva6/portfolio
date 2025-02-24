@@ -253,6 +253,37 @@ h1 {
   color: whitesmoke;
 }
 
+/* App.css */
+.animate-flyout {
+  animation: flyout 1s ease-out forwards;
+}
+
+.animate-flyin {
+  animation: flyin 1s ease-in forwards;
+}
+
+@keyframes flyout {
+  0% {
+    transform: scale(0) translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyin {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) translateY(0);
+    opacity: 0;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
