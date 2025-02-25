@@ -6,7 +6,7 @@ function DuolingoStats() {
     const [isHiding, setIsHiding] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5000/duolingo')
+        fetch('https://harshithalva6.github.io/DuolingoV2/duolingo.json')
             .then((response) => response.json())
             .then((data) => {
                 const extractedStats = data.stats.map((htmlString) => {
