@@ -6,17 +6,15 @@ function DuolingoStats() {
     const [isHiding, setIsHiding] = useState(false);
 
     useEffect(() => {
-        fetch('https://harshithalva6.github.io/DuolingoV2/duolingo.json')
+        fetch('https://harshithalva6.github.io/Duolingo/duolingo.json')
             .then((response) => response.json())
             .then((data) => {
                 const extractedStats = data.stats.map((htmlString) => {
                     const parser = new DOMParser();
                     const doc = parser.parseFromString(htmlString, "text/html");
-
                     const imgTag = doc.querySelector("img");
                     const h4Tag = doc.querySelector("h4");
                     const divTag = doc.querySelector("div._3oUUc"); 
-
                     return {
                         img_src: imgTag ? imgTag.src : null,
                         title: h4Tag ? h4Tag.textContent.trim() : null,
