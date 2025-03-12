@@ -1,46 +1,52 @@
-import React, {useState, useEffect} from 'react';
-import resumeFile from '../cv/Harshith_H_Resume.pdf';
-import "../App.css";
+import React, { useState, useEffect } from 'react';
+import resumeFile from '../cv/Harshith_Harijeevan.pdf';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { saveAs } from "file-saver";
 import { FaDownload } from "react-icons/fa6";
+import "../App.css";
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
 const Resume = () => {
-    const [scale, setScale] = useState(1);
-    const handleDownload = () => {
-        saveAs(resumeFile, "Harshith_H_Resume.pdf");
-      };
+    const [numPages, setNumPages] = useState(null);
+    const [pageWidth, setPageWidth] = useState(400);
+
     useEffect(() => {
-        const updateScale = () => {
+        const updatePageWidth = () => {
             const viewportWidth = window.innerWidth;
-            if (viewportWidth < 768) {
-                setScale(0.5); // Slightly larger for tablets
+            if (viewportWidth < 640) {
+                setPageWidth(viewportWidth * 0.75);
             } else {
-                setScale(1); // Default for desktop
+                setPageWidth(400);
             }
         };
-        updateScale();
-        window.addEventListener('resize', updateScale);
 
-        return () => window.removeEventListener('resize', updateScale);
+        updatePageWidth();
+        window.addEventListener('resize', updatePageWidth);
+        return () => window.removeEventListener('resize', updatePageWidth);
     }, []);
+
+    const handleDownload = () => {
+        saveAs(resumeFile, "Harshith_Harijeevan.pdf");
+    };
+
     return (
-        <div id = "back" className="flex min-h-screen"> 
-            <div className="w-1/2 bg-gray-100 hidden sm:block">
-            </div>
-            <div className="w-1/2 flex flex-col justify-center items-center">
-            <button onClick={handleDownload} class="mb-10 gap-2 text-white flex flex-row">
-                Download PDF <FaDownload size={24}/>
-            </button>
-            <Document file={resumeFile} id='resumes'>
-                <Page renderTextLayer={false}
-                    renderAnnotationLayer={false}
-                    customTextRenderer={false}
-                    pageNumber={1} scale={scale} />
-            </Document>
+        <div id="back" className="flex min-h-screen"> 
+            <div className="w-1/2 bg-gray-100 hidden sm:block"></div>
+            <div className="w-1/2 flex flex-col justify-center items-center sm:mx-4">
+                <button onClick={handleDownload} className="mb-10 gap-2 text-white flex flex-row">
+                    Download PDF <FaDownload size={24}/>
+                </button>
+                <div className="p-4 rounded-lg shadow-lg bg-white">
+                    <Document file={resumeFile} onLoadSuccess={({ numPages }) => setNumPages(numPages)} className="flex justify-center">
+                        {Array.from(new Array(numPages), (el, index) => (
+                            <Page key={`page_${index + 1}`} pageNumber={index + 1} width={pageWidth} renderTextLayer={false} renderAnnotationLayer={false} />
+                        ))}
+                    </Document>
+                </div>
             </div>
         </div>
     );
-}
+};
+
 export default Resume;

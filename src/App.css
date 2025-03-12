@@ -320,3 +320,9 @@ h1 {
     align-items: center;
   }
 }
+
+@media (max-width: 1080px) {
+  .projects {
+      grid-template-columns: 100%;
+  }
+}
