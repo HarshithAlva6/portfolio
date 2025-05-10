@@ -12,6 +12,7 @@ import dev from '../images/Dev.jpg';
 import js from '../images/JavaScript.jpg';
 import spring from '../images/Spring.jpg';
 import tf from '../images/TensorFlow.jpg';
+import sd from '../images/SDA.png';
 
 const Carousel2 = () => {
     const [showProjects, setShowProjects] = useState(true);
@@ -23,7 +24,7 @@ const Carousel2 = () => {
                     <h3 className="my-heading">Projects</h3>
                     <div id="carouselExampleCaptions2" className="carousel slide cert" data-bs-ride="false">
                         <div className="carousel-inner">
-                            {[dyn, jen, mdb, njs, sbh2, sel, wpk].map((img, index) => (
+                            {[dyn, jen, mdb, njs, sbh2, sel, wpk,sd].map((img, index) => (
                                 <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
                                     <img className="d-block w-100" src={img} alt={`Slide ${index + 1}`} />
                                 </div>
