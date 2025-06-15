@@ -27,7 +27,7 @@ const Resume = () => {
     }, []);
 
     const handleDownload = () => {
-        saveAs(resumeFile, "Harshith_Harijeevan.pdf");
+        saveAs(resumeFile, "Harshith_Harijeevan_CV.pdf");
     };
 
     return (
