@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import resumeFile from '../cv/Harshith_Harijeevan.pdf';
+import resumeFile from '../cv/Harshith_Harijeevan_CV.pdf';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { saveAs } from "file-saver";
 import { FaDownload } from "react-icons/fa6";
