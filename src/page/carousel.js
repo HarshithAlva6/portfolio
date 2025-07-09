@@ -30,6 +30,13 @@ const Carousel = () => {
             title: "To-Do List",
             desc: "A simple To-Do App that encompasses tools such as Next.js, Tailwind CSS, Express.js, Prisma for ORM and MySQL using Vercel and Railway to host the app.",
             git: "https://github.com/HarshithAlva6/ToDoList"
+        },
+        {
+            imageUrl: "https://api.microlink.io/?url=https%3A%2F%2Fzealthy-pvq5.onrender.com%2F&screenshot=true&embed=screenshot.url",
+            projectUrl: "https://zealthy-pvq5.onrender.com/",
+            title: "Customer Onboarding",
+            desc: "Built a full-stack web app for Zealthy using Next.js (App Router) with TypeScript, Tailwind CSS, and import aliases. Integrated a Dockerized PostgreSQL backend with Express.js, set up secure auth using bcrypt, and structured modular API routes.",
+            git: "https://github.com/HarshithAlva6/zealthy"
         }
     ]
     return(
