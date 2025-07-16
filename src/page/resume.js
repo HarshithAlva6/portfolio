@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import resumeFile from '../cv/Harshith_Harijeevan_CV.pdf';
+import resumeFile from '../cv/Harshith_Resume.pdf';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { saveAs } from "file-saver";
 import { FaDownload } from "react-icons/fa6";
@@ -27,7 +27,7 @@ const Resume = () => {
     }, []);
 
     const handleDownload = () => {
-        saveAs(resumeFile, "Harshith_Harijeevan_CV.pdf");
+        saveAs(resumeFile, "Harshith_Resume.pdf");
     };
 
     return (
