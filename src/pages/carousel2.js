@@ -74,7 +74,12 @@ const Carousel2 = ({ onShowCertificates, selectedToggle, onToggleChange }) => {
                             className={`w-32 text-center py-1 rounded-full transition-all mx-1 ${
                                 selectedToggle === key ? 'bg-teal-500 text-white' : 'bg-gray-300 text-black'
                             }`}
-                            onClick={() => onToggleChange(key)}
+                            onClick={() => {
+                                onToggleChange(key);
+                                if (key === 'viewall' && typeof onShowCertificates === 'function') {
+                                    onShowCertificates();
+                                }
+                            }}
                         >
                             {key === 'projects' ? 'Projects' : key === 'certificates' ? 'Certificates' : 'View All'}
                         </div>

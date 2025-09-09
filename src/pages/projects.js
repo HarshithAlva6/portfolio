@@ -185,6 +185,7 @@ const Projects = () => {
       <Carousel2
         selectedToggle={selectedToggle}
         onToggleChange={setSelectedToggle}
+        onShowCertificates={() => setShowCertificatesModal(true)}
       />
       <CertificatesModal
         isOpen={showCertificatesModal}
