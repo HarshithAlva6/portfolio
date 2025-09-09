@@ -25,10 +25,20 @@ import js from '../assets/images/JavaScript.jpg';
 import tf from '../assets/images/TensorFlow.jpg';
 import spring from '../assets/images/Spring.jpg';
 import data from '../assets/images/Data Science.jpg';
+import interspect from '../assets/images/interspect.jpg';
 
 const items = [
-  {
+    {
     id: 1,
+    title: 'InterspectAI',
+    subtitle: 'Software Development Engineer',
+    description: 'Leveraged GitHub Copilot to accelerate development of an Agentic AI PaaS with RESTful APIs via CockroachDB backend',
+    image: interspect,
+    link: 'https://www.interspect.ai/',
+    skills: ['UIBakery', 'CoPilot', 'Flask', 'Python']    
+  },
+  {
+    id: 2,
     title: 'BizInc',
     subtitle: 'UI/UX Designer',
     description: 'Reduced design iterations and prototyping by 60% using Figma in KANBAN sprint for an employer’s portal',
@@ -37,7 +47,7 @@ const items = [
     skills: ['KANBAN', 'Figma', 'UI/UX']
   },
   {
-    id: 2,
+    id: 3,
     title: 'MindKind',
     subtitle: 'Local Business Connection',
     description: 'MindKind connects local businesses with people who want to experience their community. It is the social platform people use to access daily deals and events in the community.',
@@ -46,7 +56,7 @@ const items = [
     skills: ['Next.js', 'Tailwind CSS', 'Vercel', 'Node.js']
   },
   {
-    id: 3,
+    id: 4,
     title: 'Danske IT',
     subtitle: 'Modernization and Automation',
     description: 'Fulfilled hands-on training to create 2 projects on COBOL and PL/I, which comprise the legacy systems. This is a part of Danica Pensions injury and customer systems. Implemented front-end as part of a pilot project. Switching from 40% of the legacy systems which used Gemini and COBOL to the newest decentralized ones like ReactJS and cloud servers.',
@@ -56,7 +66,7 @@ const items = [
     skills: ['COBOL', 'VBA', 'ReactJS', '.NET']
   },
   {
-    id: 4,
+    id: 5,
     title: 'Xcelerator',
     subtitle: 'Educational Content',
     description: 'Procure, expand, and dispense engaging content for students to get real-world context about what they learn on a daily basis. Generate 1 pager notes, which also strengthened the knowledge of the domain',
