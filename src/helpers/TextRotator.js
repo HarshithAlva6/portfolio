@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const TextRotator = () => {
-  const texts = ["Software Engineer", "Application Developer", "UI/UX Designer"];
+  const texts = React.useMemo(() => [
+    "Software Engineer",
+    "Application Developer",
+    "UI/UX Designer"
+  ], []);
   const [currentText, setCurrentText] = useState(texts[0]);
   const [index, setIndex] = useState(0);
 

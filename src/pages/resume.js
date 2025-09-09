@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import resumeFile from '../cv/Harshith_Resume.pdf';
+import resumeFile from '../assets/docs/cv/Harshith_Resume.pdf';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { saveAs } from "file-saver";
 import { FaDownload } from "react-icons/fa6";
-import "../App.css";
+import "../styles/App.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 

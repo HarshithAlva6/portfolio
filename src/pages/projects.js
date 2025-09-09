@@ -1,13 +1,30 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import '../App.css';
-import wow from '../images/danske.png';
-import xcel from '../images/xcelerator.jpg';
-import Mind from '../images/MindKind.jpg';
-import biz from '../images/biz.jpg';
-import Uber from '../images/uber.webp';
-import lme from '../images/lme.jpg';
+  import '../styles/App.css';
+  import wow from '../assets/images/danske.png';
+  import xcel from '../assets/images/xcelerator.jpg';
+  import Mind from '../assets/images/MindKind.jpg';
+  import biz from '../assets/images/biz.jpg';
+  import Uber from '../assets/images/uber.webp';
+  import lme from '../assets/images/lme.jpg';
+
 import Carousel2 from './carousel2';
+import CertificatesModal from '../components/CertificatesModal';
+// Import all project and certificate images for View All
+import dyn from '../assets/images/coursera/dyn.jpg';
+import jen from '../assets/images/coursera/jen.jpg';
+import mdb from '../assets/images/coursera/mdb.jpg';
+import njs from '../assets/images/coursera/njs.jpg';
+import sbh2 from '../assets/images/coursera/sbh2.jpg';
+import sel from '../assets/images/coursera/sel.jpg';
+import wpk from '../assets/images/coursera/wbk.jpg';
+import sd from '../assets/images/SDA.png';
+import dev from '../assets/images/Dev.jpg';
+import coursera from '../assets/images/Coursera.jpg';
+import js from '../assets/images/JavaScript.jpg';
+import tf from '../assets/images/TensorFlow.jpg';
+import spring from '../assets/images/Spring.jpg';
+import data from '../assets/images/Data Science.jpg';
 
 const items = [
   {
@@ -30,24 +47,6 @@ const items = [
   },
   {
     id: 3,
-    title: 'Uber (Intern)',
-    subtitle: 'Complete Full Stack',
-    description: 'Focused on optimizing ride-sharing features, improving performance while enhancing user experience with dynamic routing and responsive UI.',
-    image: Uber,
-    link: 'https://www.uber.com/',
-    skills: ['Node.js', 'React.js', 'Spring Boot', 'GraphQL', 'WebSockets', 'AWS']
-  },
-  {
-    id: 4,
-    title: 'LME Services',
-    subtitle: 'Reinvent APIs',
-    description: 'Engineered scalable APIs, optimized state management with Redux, and improved performance and security, enhancing app efficiency and user engagement.',
-    image: lme,
-    link: 'https://lmeservices.com/',
-    skills: ['Node.js', 'TypeScript', 'Next.js', 'OAuth 2.0', 'Mantine']
-  },
-  {
-    id: 5,
     title: 'Danske IT',
     subtitle: 'Modernization and Automation',
     description: 'Fulfilled hands-on training to create 2 projects on COBOL and PL/I, which comprise the legacy systems. This is a part of Danica Pensions injury and customer systems. Implemented front-end as part of a pilot project. Switching from 40% of the legacy systems which used Gemini and COBOL to the newest decentralized ones like ReactJS and cloud servers.',
@@ -57,7 +56,7 @@ const items = [
     skills: ['COBOL', 'VBA', 'ReactJS', '.NET']
   },
   {
-    id: 6,
+    id: 4,
     title: 'Xcelerator',
     subtitle: 'Educational Content',
     description: 'Procure, expand, and dispense engaging content for students to get real-world context about what they learn on a daily basis. Generate 1 pager notes, which also strengthened the knowledge of the domain',
@@ -67,12 +66,31 @@ const items = [
   }
 ];
 
+
+const projectImages = [dyn, jen, mdb, njs, sbh2, sel, wpk, sd];
+const certificateImages = [dev, coursera, js, tf, spring, data];
+
 const Projects = () => {
   const [selectedId, setSelectedId] = useState(null);
+  const [showCertificatesModal, setShowCertificatesModal] = useState(false);
+  const [selectedToggle, setSelectedToggle] = useState('projects');
 
   const truncateText = (text, limit) => {
     return text.length > limit ? text.substring(0, limit) + '...' : text;
   };
+
+  // When View All is selected, open modal automatically
+  React.useEffect(() => {
+    if (selectedToggle === 'viewall') {
+      setShowCertificatesModal(true);
+    }
+  }, [selectedToggle]);
+
+  // Determine which images to show in modal
+  let modalImages = [];
+  if (selectedToggle === 'projects') modalImages = projectImages;
+  else if (selectedToggle === 'certificates') modalImages = certificateImages;
+  else if (selectedToggle === 'viewall') modalImages = [...projectImages, ...certificateImages];
 
   return (
     <div id="projects">
@@ -164,7 +182,18 @@ const Projects = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <Carousel2 />
+      <Carousel2
+        selectedToggle={selectedToggle}
+        onToggleChange={setSelectedToggle}
+      />
+      <CertificatesModal
+        isOpen={showCertificatesModal}
+        onClose={() => {
+          setShowCertificatesModal(false);
+          if (selectedToggle === 'viewall') setSelectedToggle('projects');
+        }}
+        images={modalImages}
+      />
     </div>
   );
 };

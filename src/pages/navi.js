@@ -1,10 +1,10 @@
 import React from 'react';
-import '../App.css';
-import { Link, useNavigate } from 'react-router-dom';
+import '../styles/App.css';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressCard, faComputer, faFile, faHomeUser } from '@fortawesome/free-solid-svg-icons';
-import TextRotator from '../helper/TextRotator';
-import tar from '../images/tar.webp';
+import TextRotator from '../helpers/TextRotator';
+import tar from '../assets/images/tar.webp';
 
 const Navi = () => {
     const navigate = useNavigate(); 

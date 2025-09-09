@@ -1,13 +1,13 @@
-import Info from './page/info';
+import Info from './pages/info';
 import React, {useState, useEffect} from 'react';
 //import { Link } from 'react-router-dom';
-import Projects from "./page/projects";
-import Resume from "./page/resume";
-import Footer from "./page/footer";
-import "./App.css";
-import Navi from './page/navi';
-import About from './page/about';
-import CustomCursor from './helper/CustomCursor';
+import Projects from "./pages/projects";
+import Resume from "./pages/resume";
+import Footer from "./pages/footer";
+import "./styles/App.css";
+import Navi from './pages/navi';
+import About from './pages/about';
+import CustomCursor from './helpers/CustomCursor';
 
 function App() {
   const [isScrollable, setIsScrollable] = useState(true);

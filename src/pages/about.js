@@ -1,25 +1,26 @@
 import React, {useState} from 'react';
-import '../App.css';
-import Prog from '../images/programmer.png';
+
+import '../styles/App.css';
+import Prog from '../assets/images/programmer.png';
 import GitHubCalendar from 'react-github-calendar';
 import Carousel from './carousel';
-import js from '../images/skill/js.png';
-import py from '../images/skill/python.png';
-import html from '../images/skill/html.png';
-import react from '../images/skill/react.webp';
-import next from '../images/skill/next.webp';
-import java from '../images/skill/java.png';
-import tail from '../images/skill/tail.png';
-import spring from '../images/skill/spring.png';
-import php from '../images/skill/php.png';
-import sql from '../images/skill/sql.png';
-import node from '../images/skill/node.webp';
-import mongo from '../images/skill/mongo.png';
-import css from '../images/skill/css.png';
-import c from '../images/skill/c.png';
-import graph from '../images/skill/graphQL.png';
-import DuolingoStats from '../component/DuolingoStats';
-
+import CertificatesModal from '../components/CertificatesModal';
+import js from '../assets/images/skill/js.png';
+import py from '../assets/images/skill/python.png';
+import html from '../assets/images/skill/html.png';
+import react from '../assets/images/skill/react.webp';
+import next from '../assets/images/skill/next.webp';
+import java from '../assets/images/skill/java.png';
+import tail from '../assets/images/skill/tail.png';
+import spring from '../assets/images/skill/spring.png';
+import php from '../assets/images/skill/php.png';
+import sql from '../assets/images/skill/sql.png';
+import node from '../assets/images/skill/node.webp';
+import mongo from '../assets/images/skill/mongo.png';
+import css from '../assets/images/skill/css.png';
+import c from '../assets/images/skill/c.png';
+import graph from '../assets/images/skill/graphQL.png';
+import DuolingoStats from '../components/DuolingoStats';
 
 const skillImages = [
     py, js, html, css,
@@ -34,15 +35,18 @@ const About = () => {
         email: '',
         message: '',
         sub: ''
-      });
+    });
+    const [showCertificatesModal, setShowCertificatesModal] = useState(false);
 
-      const handleChange = (e) => {
+
+
+    const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
           ...prevData,
           [name]: value,
         }));
-      };
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
@@ -65,7 +69,7 @@ const About = () => {
           sub: ''
         });
         window.scrollTo(0, 0);
-      };
+    };
     return (
     <div className = "whiten">
         <div id = "about" className="flex flex-row space-x-4">
@@ -81,6 +85,7 @@ const About = () => {
             </div>
         </div>
         <Carousel />
+        <CertificatesModal isOpen={showCertificatesModal} onClose={() => setShowCertificatesModal(false)} />
         <div class = 'cont'>
             <h2 className = "my-heading">GitHub Contributions</h2>
             <div className="calendar-container">
@@ -127,4 +132,5 @@ const About = () => {
     </div>
     );
 }
+
 export default About;
