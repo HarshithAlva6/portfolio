@@ -4,6 +4,13 @@ import { FaGithub, FaDoorOpen } from "react-icons/fa";
 const Carousel = () => {
     const data = [
         {
+            imageUrl: "https://api.microlink.io/?url=https%3A%2F%2Fquiz-generator-renote.vercel.app%2F&screenshot=true&embed=screenshot.url",
+            projectUrl: "https://quiz-generator-renote.vercel.app/",
+            title: "Reinforcement Learning using Notes",
+            desc: "ReNote is a full-stack web application designed to revolutionize how students and professionals study. It automatically converts raw notes into interactive multiple-choice quiz cards with questions, correct answers, and contextually relevant distractors.",
+            git: "https://github.com/HarshithAlva6/quiz-generator-renote"
+        },
+        {
             imageUrl: "https://api.microlink.io/?url=https%3A%2F%2Fsurvey-liart-two.vercel.app%2Fformbuilder&overlay.browser=dark&screenshot=true&embed=screenshot.url",
             projectUrl: "https://survey-liart-two.vercel.app/formbuilder",
             title: "Survey Form Builder",
