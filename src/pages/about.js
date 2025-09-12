@@ -72,12 +72,12 @@ const About = () => {
     };
     return (
     <div className = "whiten">
-        <div id = "about" className="flex flex-row space-x-4">
-            <div className="left flex-40 w-full md:w-full">
+        <div id = "about" className="flex flex-col sm:flex-row space-x-0 sm:space-x-4 items-center sm:items-start">
+            <div className="left flex-40 w-full md:w-full flex justify-center sm:justify-start items-center">
                 <img src={Prog} alt="Logo"/>
             </div>
-            <div className="right flex-60 w-full md:w-full mx-10">
-                <div class = "grid grid-cols-4 gap-2 justify-items-center items-center w-full pt-5">
+            <div className="right flex-60 w-full md:w-full mx-0 sm:mx-10 flex items-center">
+                <div class = "grid grid-cols-4 gap-2 justify-items-center items-center w-full pt-5 pb-8 sm:pb-0">
                 {skillImages.map((image, index) => (
                             <img key={index} src={image} alt={`Skill ${index + 1}`} className="w-full max-w-[140px] md:max-w-[140px] lg:max-w-[140px] h-auto"/>
                 ))}

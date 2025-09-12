@@ -49,23 +49,23 @@ const Carousel = () => {
     return(
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
     {data.map((proj) => (
-    <div class="flex flex-row glass-effect w-full">
-        <div class="flex flex-col flex-none">
+    <div class="flex flex-col sm:flex-row glass-effect w-full max-w-full rounded-lg overflow-hidden mb-4 shadow-lg">
+        <div class="flex flex-col flex-none w-full sm:w-2/5">
             <a href={proj.projectUrl} target="_blank" rel="noopener noreferrer">
                 {proj.imageUrl ? (
-                    <img className="h-40 object-cover" src={proj.imageUrl} alt={proj.title} />
+                    <img className="h-40 w-full object-contain sm:object-cover bg-black" src={proj.imageUrl} alt={proj.title} />
                 ) : (
                     <div className="h-40 bg-gray-300 flex items-center justify-center">Loading...</div>
                 )}
             </a>
             <div class="flex flex-row justify-center mt-3 gap-8">
-                <a href={proj.git}><FaGithub size={48}/></a>
-                <a href={proj.projectUrl}><FaDoorOpen size={48}/></a>
+                <a href={proj.git}><FaGithub size={36}/></a>
+                <a href={proj.projectUrl}><FaDoorOpen size={36}/></a>
             </div>
         </div>
-        <div class="flex flex-col text-left ml-4">
-            <h2>{proj.title}</h2>
-            <p class="mt-2">{proj.desc}</p>
+        <div class="flex flex-col sm:w-3/5 break-words max-w-full px-4 sm:items-start">
+            <h2 className="text-lg font-bold break-words text-center w-full pt-2 sm:pt-0">{proj.title}</h2>
+            <p className="mt-2 text-sm break-words whitespace-pre-line max-w-full text-center sm:text-center text-justify">{proj.desc}</p>
         </div>
     </div>
     ))}
