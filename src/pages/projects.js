@@ -26,6 +26,8 @@ import tf from '../assets/images/TensorFlow.jpg';
 import spring from '../assets/images/Spring.jpg';
 import data from '../assets/images/Data Science.jpg';
 import interspect from '../assets/images/interspect.jpg';
+import python from '../assets/images/python.png';
+import swift from '../assets/images/swift.png';
 
 const items = [
     {
@@ -78,7 +80,7 @@ const items = [
 
 
 const projectImages = [dyn, jen, mdb, njs, sbh2, sel, wpk, sd];
-const certificateImages = [dev, coursera, js, tf, spring, data];
+const certificateImages = [dev, coursera, js, tf, spring, data, python, swift];
 
 const Projects = () => {
   const [selectedId, setSelectedId] = useState(null);
