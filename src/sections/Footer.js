@@ -3,12 +3,12 @@ import { CDBContainer, CDBBox, CDBBtn, CDBIcon } from 'cdbreact';
 
 const Footer = () => {
   return (
-    <div class = "shadow">
+    <div className = "shadow">
     <CDBContainer>
       <CDBBox
           className="flex flex-col md:flex-row md:justify-between items-center mx-auto py-4 space-y-4 md:space-y-0">
         <CDBBox>
-          <small className="ms-2 mob">&copy; 2023 Harshith Harijeevan. All rights reserved.</small>
+          <small className="ms-2 mob">&copy; {new Date().getFullYear()} Harshith Harijeevan. All rights reserved.</small>
         </CDBBox>
         <CDBBox className="mob">
           <CDBBtn flat color="light" className="p-2" href='https://www.linkedin.com/in/harshith-harijeevan-ba796616b/' target='_blank' rel="noopener noreferrer">

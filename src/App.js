@@ -1,26 +1,27 @@
-import Info from './pages/info';
+import Info from './sections/Info';
 import React, {useState, useEffect} from 'react';
 //import { Link } from 'react-router-dom';
-import Projects from "./pages/projects";
-import Resume from "./pages/resume";
-import Footer from "./pages/footer";
+import Projects from "./sections/Projects";
+import Resume from "./sections/Resume";
+import Footer from "./sections/Footer";
 import "./styles/App.css";
-import Navi from './pages/navi';
-import About from './pages/about';
-import CustomCursor from './helpers/CustomCursor';
+import Navi from './sections/Navbar';
+import About from './sections/About';
+import CustomCursor from './components/CustomCursor';
+import useMediaQuery from './hooks/useMediaQuery';
 
 function App() {
   const [isScrollable, setIsScrollable] = useState(true);
   const [navPosition, setNavPosition] = useState(0);
+  const isDesktop = useMediaQuery('(min-width: 768px)');
 
 
   useEffect(() => {
     const handleScroll = () => {
       const resumeSection = document.getElementById('back');
 
-      if (resumeSection) { 
+      if (resumeSection) {
         const resumeOffsetTop = resumeSection.getBoundingClientRect().top + window.scrollY; // Get offset from the top
-        console.log(resumeSection.getBoundingClientRect().top);
         const documentHeight = document.documentElement.scrollHeight;
         const windowHeight = window.innerHeight;
 
@@ -44,7 +45,7 @@ function App() {
   return ( 
     <div className="App">
       <CustomCursor />
-      <div className="vertical-nav" style={window.innerWidth > 768 ? { position: isScrollable ? 'absolute' : 'fixed', top: isScrollable ? navPosition : 0}:{}}>
+      <div className="vertical-nav" style={isDesktop ? { position: isScrollable ? 'absolute' : 'fixed', top: isScrollable ? navPosition : 0}:{}}>
         <Navi />
       </div>
       <div className='content'>

@@ -2,8 +2,14 @@ import React, { useState, useEffect } from "react";
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  // Only relevant for devices with a precise pointer (mouse/trackpad).
+  // On touch screens the glow just sits in a corner and wastes paints.
+  const [hasFinePointer, setHasFinePointer] = useState(false);
 
   useEffect(() => {
+    if (!window.matchMedia('(pointer: fine)').matches) return;
+    setHasFinePointer(true);
+
     const handleMouseMove = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
@@ -14,6 +20,8 @@ const CustomCursor = () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
+  if (!hasFinePointer) return null;
 
   return (
     <div

@@ -1,86 +1,13 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-  import '../styles/App.css';
-  import wow from '../assets/images/danske.png';
-  import xcel from '../assets/images/xcelerator.jpg';
-  import Mind from '../assets/images/MindKind.jpg';
-  import biz from '../assets/images/biz.jpg';
-  import Uber from '../assets/images/uber.webp';
-  import lme from '../assets/images/lme.jpg';
-
-import Carousel2 from './carousel2';
+import '../styles/App.css';
+import Carousel2 from '../components/CertificatesCarousel';
 import CertificatesModal from '../components/CertificatesModal';
-// Import all project and certificate images for View All
-import dyn from '../assets/images/coursera/dyn.jpg';
-import jen from '../assets/images/coursera/jen.jpg';
-import mdb from '../assets/images/coursera/mdb.jpg';
-import njs from '../assets/images/coursera/njs.jpg';
-import sbh2 from '../assets/images/coursera/sbh2.jpg';
-import sel from '../assets/images/coursera/sel.jpg';
-import wpk from '../assets/images/coursera/wbk.jpg';
-import sd from '../assets/images/SDA.png';
-import dev from '../assets/images/Dev.jpg';
-import coursera from '../assets/images/Coursera.jpg';
-import js from '../assets/images/JavaScript.jpg';
-import tf from '../assets/images/TensorFlow.jpg';
-import spring from '../assets/images/Spring.jpg';
-import data from '../assets/images/Data Science.jpg';
-import interspect from '../assets/images/interspect.jpg';
-import python from '../assets/images/python.png';
-import swift from '../assets/images/swift.png';
+import { experience as items } from '../data/experience';
+import { projectGallery, certificateGallery } from '../data/galleries';
 
-const items = [
-    {
-    id: 1,
-    title: 'InterspectAI',
-    subtitle: 'Software Development Engineer',
-    description: 'Leveraged GitHub Copilot to accelerate development of an Agentic AI PaaS with RESTful APIs via CockroachDB backend',
-    image: interspect,
-    link: 'https://www.interspect.ai/',
-    skills: ['UIBakery', 'CoPilot', 'Flask', 'Python']    
-  },
-  {
-    id: 2,
-    title: 'BizInc',
-    subtitle: 'UI/UX Designer',
-    description: 'Reduced design iterations and prototyping by 60% using Figma in KANBAN sprint for an employer’s portal',
-    image: biz,
-    link: 'https://www.bizinc.io/',
-    skills: ['KANBAN', 'Figma', 'UI/UX']
-  },
-  {
-    id: 3,
-    title: 'MindKind',
-    subtitle: 'Local Business Connection',
-    description: 'MindKind connects local businesses with people who want to experience their community. It is the social platform people use to access daily deals and events in the community.',
-    image: Mind,
-    link: 'https://mindkind.life/',
-    skills: ['Next.js', 'Tailwind CSS', 'Vercel', 'Node.js']
-  },
-  {
-    id: 4,
-    title: 'Danske IT',
-    subtitle: 'Modernization and Automation',
-    description: 'Fulfilled hands-on training to create 2 projects on COBOL and PL/I, which comprise the legacy systems. This is a part of Danica Pensions injury and customer systems. Implemented front-end as part of a pilot project. Switching from 40% of the legacy systems which used Gemini and COBOL to the newest decentralized ones like ReactJS and cloud servers.',
-    image: wow,
-    //link: 'https://danskebank.com/no/karriere/fagspesialist/group-it',
-    link: 'https://www.linkedin.com/company/danskeindia/',
-    skills: ['COBOL', 'VBA', 'ReactJS', '.NET']
-  },
-  {
-    id: 5,
-    title: 'Xcelerator',
-    subtitle: 'Educational Content',
-    description: 'Procure, expand, and dispense engaging content for students to get real-world context about what they learn on a daily basis. Generate 1 pager notes, which also strengthened the knowledge of the domain',
-    image: xcel,
-    link: 'https://xcelerator.ninja/',
-    skills: ['Excel', 'Word', 'Agile Methodologies']
-  }
-];
-
-
-const projectImages = [dyn, jen, mdb, njs, sbh2, sel, wpk, sd];
-const certificateImages = [dev, coursera, js, tf, spring, data, python, swift];
+const projectImages = projectGallery;
+const certificateImages = certificateGallery;
 
 const Projects = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -182,11 +109,11 @@ const Projects = () => {
                 {items.find(item => item.id === selectedId).description}
               </p>
               <div>
-                <ul class="flex flex-wrap justify-center gap-4 p-2">
+                <ul className="flex flex-wrap justify-center gap-4 p-2">
                 {items.find(item => item.id === selectedId).skills.map(skill => (
-                    <li onClick={(event) => {
-                      event.stopPropagation();  
-                      }} class="px-4 py-2 flex items-center rounded-full border border-black-300 bg-gray-200 text-black hover:bg-gray-300 hover:shadow-lg transition-all">{skill}</li>
+                    <li key={skill} onClick={(event) => {
+                      event.stopPropagation();
+                      }} className="px-4 py-2 flex items-center rounded-full border border-black-300 bg-gray-200 text-black hover:bg-gray-300 hover:shadow-lg transition-all">{skill}</li>
                   ))}
                 </ul>
               </div>

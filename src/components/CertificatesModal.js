@@ -1,14 +1,5 @@
 import React from 'react';
-
-
-// Default certificate images (for About page or fallback)
-import dev from '../assets/images/Dev.jpg';
-import coursera from '../assets/images/Coursera.jpg';
-import js from '../assets/images/JavaScript.jpg';
-import tf from '../assets/images/TensorFlow.jpg';
-import spring from '../assets/images/Spring.jpg';
-import data from '../assets/images/Data Science.jpg';
-const defaultCertificateImages = [dev, coursera, js, tf, spring, data];
+import { certificateCarousel as defaultCertificateImages } from '../data/galleries';
 
 const CertificatesModal = ({ isOpen, onClose, images }) => {
   if (!isOpen) return null;
@@ -34,7 +25,7 @@ const CertificatesModal = ({ isOpen, onClose, images }) => {
           ))}
         </div>
       </div>
-      <style jsx>{`
+      <style>{`
         @keyframes modal-fade-in {
           0% { opacity: 0; transform: scale(0.95); }
           100% { opacity: 1; transform: scale(1); }

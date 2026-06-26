@@ -78,7 +78,7 @@ html, body {
   padding: 10px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
   .vertical-nav .my-heading2{
     display: none;
   }
