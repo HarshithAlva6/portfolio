@@ -16,7 +16,7 @@ const Info = () => {
             <p className = "text-white"><strong>Founding AI Engineer with production experience shipping real-time voice AI pipelines,
             agentic systems, and LLM-integrated mobile apps across AI, health, and fintech.
             Native Swift/SwiftUI depth with two App Store apps; equally fluent across Python, FastAPI, React Native, and Supabase
-            &mdash; with a bias toward fast shipping and production reliability.
+            - with a bias toward fast shipping and production reliability.
             </strong></p>
         </div>
     </div>
