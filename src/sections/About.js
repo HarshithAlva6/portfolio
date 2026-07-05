@@ -51,17 +51,30 @@ const About = () => {
     };
     return (
     <div className = "whiten">
-        <div id = "about" className="flex flex-col sm:flex-row space-x-0 sm:space-x-4 items-center sm:items-start">
-            <div className="left flex-40 w-full md:w-full flex justify-center sm:justify-start items-center">
-                <img src={Prog} alt="Illustration of a developer at work"/>
+        <div id = "about" className="flex flex-col sm:flex-row space-x-0 sm:space-x-6 items-center sm:items-start px-4 sm:px-8 pt-6">
+            <div className="left flex-shrink-0 w-48 sm:w-56 flex justify-center">
+                <img src={Prog} alt="Illustration of a developer at work" className="w-full h-auto"/>
             </div>
-            <div className="right flex-60 w-full md:w-full mx-0 sm:mx-10 flex items-center">
-                <div className = "grid grid-cols-4 gap-2 justify-items-center items-center w-full pt-5 pb-8 sm:pb-0">
-                {skills.map((skill) => (
-                            <img key={skill.name} src={skill.src} alt={`${skill.name} logo`} title={skill.name} className="w-full max-w-[140px] md:max-w-[140px] lg:max-w-[140px] h-auto"/>
-                ))}
-                </div>
+            <div className="right flex flex-col justify-center mt-4 sm:mt-0">
+                <h2 className="my-heading text-left mb-3">About Me</h2>
+                <p className="text-[#c1c1c1] text-base sm:text-lg leading-relaxed mb-3">
+                    Full-stack iOS and Founding AI Engineer with a Master&apos;s in Computer Science and production experience
+                    shipping real-time voice AI pipelines, agentic systems, and LLM-integrated mobile apps across AI, health, and fintech.
+                </p>
+                <p className="text-[#c1c1c1] text-base sm:text-lg leading-relaxed mb-3">
+                    Delivered sub-300ms speech-to-speech voice AI with RAG-grounded memory, provider-agnostic LLM routing
+                    across Claude, Gemini, and OpenAI, and multi-agent orchestration end-to-end in production.
+                </p>
+                <p className="text-[#c1c1c1] text-base sm:text-lg leading-relaxed">
+                    Native Swift/SwiftUI depth with two App Store apps; equally fluent across Python, FastAPI, React Native,
+                    and Supabase &mdash; with a bias toward fast shipping, creative problem-solving, and production reliability.
+                </p>
             </div>
+        </div>
+        <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3 justify-items-center items-center w-full px-6 pt-8 pb-4">
+            {skills.map((skill) => (
+                <img key={skill.name} src={skill.src} alt={`${skill.name} logo`} title={skill.name} className="w-full max-w-[80px] h-auto"/>
+            ))}
         </div>
         <Carousel />
         <CertificatesModal isOpen={showCertificatesModal} onClose={() => setShowCertificatesModal(false)} />
