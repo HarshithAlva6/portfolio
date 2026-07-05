@@ -67,7 +67,7 @@ const About = () => {
                 </p>
                 <p className="text-[#c1c1c1] text-base sm:text-lg leading-relaxed">
                     Native Swift/SwiftUI depth with two App Store apps; equally fluent across Python, FastAPI, React Native,
-                    and Supabase &mdash; with a bias toward fast shipping, creative problem-solving, and production reliability.
+                    and Supabase - with a bias toward fast shipping, creative problem-solving, and production reliability.
                 </p>
             </div>
         </div>
