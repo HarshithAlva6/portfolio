@@ -21,7 +21,7 @@ const Navi = () => {
                 <img src={tar} alt="Visit the first version of my portfolio" title="Go to V1?" className="fixed top-0 left-0 w-20 h-20 z-50" />
             </a>
 
-            {/* Mobile menu toggle — only shown below the md breakpoint */}
+            {/* Mobile menu toggle - only shown below the md breakpoint */}
             <button
                 type="button"
                 className="md:hidden fixed top-3 right-3 z-50 w-12 h-12 flex items-center justify-center rounded-lg bg-slate-800/80 backdrop-blur text-silver ring-1 ring-white/20 shadow-lg"
